@@ -99,14 +99,12 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	-webkit-filter: grayscale(0%)
 //media query
 @mixin rt($media)
-	@if $media == 1920
-		@media only screen and (max-width: 1920px)
+	@if $media == 1440
+		@media only screen and (max-width: 1440px)
 			@content
-	@else if $media == 1600
-		@media only screen and (max-width: 1600px)
+	@else if $media == 1200
+		@media only screen and (max-width: 1200px)
 			@content
-	@else if $media == 1380
-		@media only screen and (max-width: 1380px)
+	@else if $media == 800
+		@media only screen and (max-width: 800px)
 			@content
-	@else if $media == 1120
-		@media only screen and (max-width: 1120px)
