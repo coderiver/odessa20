@@ -1,0 +1,647 @@
+@import "base"
+* 
+	margin: 0
+	padding: 0 
+	//-webkit-text-size-adjust: none
+html, body 
+	height: 100%
+	font-size: 62.5%
+body
+	+f
+	font-weight: normal 
+	+fs(14)
+	color: #333 
+	line-height: 1.2
+	//-webkit-transform: translate3d(0,0,0)
+	//-weblit-backface-visibility: hidden
+// resets
+a img, fieldset 
+	border: none
+a
+	color: #333 
+	text-decoration: none
+	&:hover
+
+p
+	line-height: 1.2
+li 
+	list-style: none
+textarea, button, select, input
+	border: none
+	outline: none
+	+fb
+button 
+	line-height: 1
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+table 
+	border-spacing: 0
+	border-collapse: collapse
+// common styles
+.wrap, .footer__in
+	position: relative
+	width: 1166px
+	margin: 0 auto
+.title
+	margin-bottom: 18px
+	+fk
+	font-size: 22px
+	text-transform: uppercase
+.title_line
+	position: relative
+	padding-bottom: 18px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -2px
+		left: 50%
+		width: 90px
+		height: 4px
+		margin-left: -45px
+		background: #333 
+.header
+	position: relative
+	height: 740px
+	padding: 0 25px
+	margin-bottom: 20px
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -72px
+		+s(circle-white) 
+.header__top, .header__in
+	+clr	
+.header__top
+	padding-top: 25px
+	margin-bottom: 20px
+.header__prev, .header__next, .footer__prev, .footer__next
+	position: absolute
+	top: 50%
+	margin-top: -37px
+	i
+		display: block
+		+trans(all .2s linear)
+		opacity: 0
+	&:hover
+		i
+			opacity: 1 
+.header__prev, .footer__prev
+	left: -115px
+	+s(slider-prev)
+	i
+		+s(slider-prev-h)
+.header__next, .footer__next
+	right: -115px
+	+s(slider-next)
+	i
+		+s(slider-next-h)
+.footer__prev, .footer__next
+	top: 87px 
+.lang
+	float: right
+	height: 26px
+	padding-left: 40px
+	border-left: 1px solid rgba(255,255,255,.6) 
+	line-height: 26px
+	a
+		float: left
+		text-transform: uppercase
+		+fb
+		+fs(11)
+		color: #FFF 
+		&:first-child
+			margin-right: 22px
+		&.is-active
+			color: #333 
+.social
+	float: right
+	margin-top: 2px
+	a
+		float: left
+		margin-right: 16px		
+		i
+			display: block
+			+trans(opacity .2s linear)
+			opacity: 0 
+		&:hover
+			i
+				opacity: 1 
+.social__fb
+	+s(social-fb)
+	i
+		+s(social-fb-h)
+.social__vk
+	+s(social-vk)
+	i
+		+s(social-vk-h)
+.social__tw
+	+s(social-tw)
+	i
+		+s(social-tw-h)
+.social__ig
+	+s(social-ig)
+	i
+		+s(social-ig-h)
+.header__in
+	position: relative
+	margin: 0 75px 120px 0
+	background: rgb(255,255,255) 
+	background: rgba(255,255,255,.6) 
+	z-index: 200
+.header__left
+	position: relative
+	float: left
+	margin-right: 38px
+	padding-right: 360px - 275px
+	background: #FFF  
+.logo
+	display: block
+	+s(logo)
+	+ht
+.link-home
+	position: absolute
+	top: 14px
+	right: -25px
+	padding: 7px
+	background: rgb(51,51,51)  
+	background: rgba(51,51,51,.3)  
+	box-shadow: 0 1px 1px rgba(0,0,0,.1) inset
+	border-radius: 50%	
+	span
+		position: relative
+		display: block
+		width: 36px
+		height: 36px
+		background: #363636
+		+background-image(linear-gradient(#363636, #090705))
+		border-radius: 50%
+		+trans(all .2s linear)
+	i
+		position: absolute
+		top: 11px
+		left: 12px
+		+s(home-white)
+	&:hover, &.is-active
+		span
+			background: #fff 
+		i
+			+s(home-black)
+.nav
+	float: left
+	text-transform: uppercase
+	&:hover
+		.nav__bg
+			z-index: 200 
+		ul
+			z-index: 300 		
+	& > ul
+		position: relative
+		float: left		
+		& > li
+			position: relative
+			float: left
+			height: 75px
+			overflow: hidden						
+			&:hover
+				background: #FFF 
+				overflow: visible
+				z-index: 200 
+				ul
+					+trans(opacity .2s linear)
+					opacity: 1 
+			& > a
+				display: block
+				height: 75px
+				padding: 0 23px
+				line-height: 75px
+				+fk
+				+fs(14)
+			ul
+				position: absolute
+				top: 76px
+				left: 0
+				padding: 23px
+				background: #FFF 				
+				opacity: 0
+				&:after
+					content: ""
+					position: absolute
+					top: -1px
+					left: 0
+					right: 0
+					height: 1px
+				a
+					display: block
+					padding: 10px 0
+					white-space: nowrap
+					+fs(11)
+					+fb
+.nav__bg
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(0,0,0,.5) 
+.search
+	position: absolute
+	top: 0
+	right: -75px
+	width: 75px
+	height: 75px
+	background: rgb(51,51,51) 
+	background: rgba(51,51,51,.6) 
+	overflow: hidden
+	&:hover
+		background: rgb(51,51,51)
+		overflow: visible
+		input
+			+trans(opacity .2s linear)
+			opacity: 1 
+	button
+		width: 75px
+		height: 75px
+		background: none
+		font-size: 0
+		i
+			display: inline-block
+			+s(search)
+	input
+		position: absolute
+		top: 0
+		right: 75px
+		width: 305px - 75px - 40px
+		height: 75px
+		padding: 0 20px
+		background: rgb(51,51,51)
+		font-size: 11px
+		text-transform: uppercase
+		color: #FFF
+		opacity: 0 
+		+ph(#fff) 
+.footer
+	padding-top: 55px
+	.logo
+		float: left
+		margin-right: 40px
+		+s(logo-s)
+.footer__top
+	position: relative
+	background: #333
+	margin-bottom: 77px  
+	&:after
+		content: ""
+		position: absolute
+		top: -39px
+		left: 50%
+		margin-left: -72px
+		+s(circle-black) 
+.footer__instagram
+	padding: 15px 0 25px
+	text-align: center
+	span
+		display: block
+		margin-bottom: 8px
+		+fb
+		+fs(11)
+		text-transform: uppercase
+		color: #FFF
+	a
+		+fk
+		+fs(22)
+		text-transform: uppercase
+		color: #FFF
+		+trans(color .2s linear)
+		&:hover
+			color: $ch 
+.footer__slider
+	position: relative
+	padding: 30px 0 110px
+	&:after, &:before
+		content: ""
+		position: absolute
+		left: 50%
+		width: 90px
+		height: 4px
+		margin-left: -45px
+		background: #FFF 
+	&:after
+		top: 0
+	&:before
+		bottom: 80px
+.footer__slider-in
+	a
+		margin-right: 4px 
+.footer__nav
+	float: left
+	margin-top: 5px
+	ul, li
+		float: left
+	li
+		margin-right: 45px 
+	a
+		+fk
+		+trans(color .2s linear)
+		text-transform: uppercase
+		&:hover
+			color: $ch 
+.join
+	position: absolute
+	bottom: -47px
+	left: 50%
+	width: 360px
+	height: 94px
+	margin-left: -184px	
+	border: 4px solid #333
+	background: #ffd50b
+	text-align: center
+	text-transform: uppercase	
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background: url(../img/bg.jpg)  
+		+trans(opacity .2s linear)
+		opacity: 1 
+	&:hover
+		&:after
+			opacity: 0
+	span, strong
+		position: relative
+		display: block 
+		z-index: 2
+	span
+		padding: 25px 0 7px
+		+fb
+		font-size: 11px		
+	strong
+		+fk
+		font-size: 22px 
+//partners
+.partners__list
+	padding: 25px 0
+	border: 2px solid #333
+	border-width: 2px 0
+	+clr
+	li
+		float: left
+		width: 25%
+		height: 90px
+		line-height: 90px
+		text-align: center
+		img
+			vertical-align: middle
+			opacity: .7 
+			+gray
+			&:hover
+				+gray0
+.partners__info
+	padding: 25px 10px
+	border: 2px solid #333
+	text-align: center
+.partners__text
+	margin-bottom: 18px
+	line-height: 1.5
+.partners__link
+	a
+		+fb	
+		font-size: 11px
+		text-transform: uppercase
+		+trans(color .2s linear)
+		&:hover
+			color: $ch 
+//copyright
+.copyright, .created
+	text-align: right
+	font-size: 12px
+	line-height: 1.5
+.copyright
+	margin-bottom: 10px
+.created
+	margin-bottom: 30px
+	a
+		display: inline-block
+		margin: 5px 0 0 15px
+		vertical-align: top
+		font-size: 12px
+		+s(created)		
+		i
+			display: block
+			+s(created-h)
+			+trans(all .2s linear)
+			opacity: 0 
+		&:hover
+			i
+				opacity: 1 
+//item
+.items	
+	//overflow: hidden
+.items__in
+	margin-right: -50px
+.block
+	margin-bottom: 18px
+	overflow: hidden
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0	
+		right: 0
+		bottom: 0	
+		background-image: url(../img/bg.jpg) 
+		opacity: 0		
+		+scale(2)
+		+trans(all .2s linear) 
+	&:hover
+		&:after
+			+scale(1)
+			opacity: 1
+.block__head, .block__text, .block__date
+	position: relative
+	z-index: 5 
+.block__type, .block__title
+	&.is-line
+		position: relative
+		padding-bottom: 18px
+		&:after
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 0
+			width: 90px
+			height: 4px
+			background: #333
+.block__type, .block__date
+	+fb	
+	font-size: 12px
+	text-transform: uppercase
+.block__type
+	margin-bottom: 18px 
+.block__title
+	padding-right: 50px
+	+fk
+	font-size: 22px
+	text-transform: uppercase
+	line-height: 1.4
+	&.is-line
+		margin-bottom: 18px
+.block__text
+	line-height: 1.5
+.block_type-1, .block_type-6
+	width: 378px
+	height: 450px
+.block_type-1
+	.block__pic
+		margin-bottom: 18px
+		img
+			display: block
+	.block__head
+		padding: 0
+		+trans(all .2s linear)
+	&:hover
+		.block__head
+			padding-left: 20px
+.block_type-2, .block_type-5
+	width: 774px
+	height: 140px
+	+trans(color .2s linear)
+	color: #FFF 
+	.block__pic
+		+clr
+		img
+			float: left
+			margin-left: 18px
+			&:first-child	
+				margin: 0
+	.block__head
+		position: absolute
+		bottom: 20px
+		left: 25px
+		.block__type, .block__title
+			&.is-line				
+				&:after	
+					+trans(background .2s linear)
+					background: #fff					
+	.block__text
+		opacity: 0
+		position: absolute
+		bottom: 20px
+		right: 20px
+		left: 378px + 18px
+		+trans(opacity .2s linear)
+		color: #000
+	&:hover
+		color: #000 
+		.block__text
+			opacity: 1
+		.block__head
+			.block__type, .block__title
+				&.is-line
+					&:after
+						background: #000
+.block_type-5
+	.block__head
+		bottom: auto
+		top: 20px
+	.block__type
+		margin: 0
+.block_type-3
+	width: 774px
+	height: 292px
+	.block__pic
+		float: left
+		margin-right: 18px
+	.block__head
+		padding-top: 18px
+		overflow: hidden
+.block_type-4, .block_type-6, .block_type-8
+	.block__title
+		padding: 0 20px 12px 
+	.block__type
+		margin-bottom: 7px
+	.block__title
+		margin-bottom: 12px
+	.block__type, .block__title
+		&.is-line
+			&:after
+				left: 50%
+				margin-left: -45px	
+.block_type-4, .block_type-8
+	width: 774px
+	height: 292px	
+	.block__info
+		position: absolute
+		top: 20px
+		left: 20px
+		bottom: 20px
+		width: 300px
+		padding: 19px
+		background: #FFF 
+		text-align: center
+	.block__text
+		margin-bottom: 12px	
+.block_type-8
+	.block__info
+		left: auto
+		right: 20px
+.block_type-6
+	.block__info
+		position: absolute
+		top: 105px
+		left: 20px
+		right: 20px
+		border: 4px solid #fff
+		padding: 17px
+		color: #FFF 
+		text-align: center
+		+trans(all .2s linear)
+		z-index: 5 
+	.block__type, .block__title
+		&.is-line
+			&:after
+				+trans(background .2s linear)
+				background: #FFF 
+	&:hover
+		.block__info
+			border: 4px solid #000
+			color: #000
+		.block__type, .block__title
+			&.is-line
+				&:after
+					background: #000
+.block_type-7
+	width: 370px
+	height: 284px
+	border: 4px solid #333
+	.block__info
+		padding: 35px 20px 0
+		text-align: center 
+	.block__type, .block__title
+		&.is-line
+			&:after
+				left: 50%
+				margin-left: -45px
+	.block__title
+		padding: 0 20px 18px 
+	&:hover
+		padding: 4px
+		border: 0
+.block_type-9
+	width: 378px
+	height: 292px
+	text-align: center
+	line-height: 292px
+	background: #333 
+	font-size: 0
+	img
+		position: relative
+		vertical-align: middle
+		z-index: 5 

@@ -1,0 +1,110 @@
+@import "base"
+//styles for main page(class with prefix "m-")
+.pic-slider
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 740px
+	overflow: hidden
+.pic-slider__in
+	position: absolute
+	top: 0
+	left: 50%
+	width: 2432px
+	height: 740px
+	margin-left: -1166px 
+.pic-slider__items
+	width: 1166px
+	height: 740px
+	margin-left: 583px
+	overflow: visible !important
+.pic-slider__item
+	position: relative
+	width: 1166px
+	height: 740px
+	background-repeat: no-repeat 
+	background-size: cover
+.m-slider__btn
+	float: left
+	margin: 0 6px 0 25px 
+	width: 35px
+	height: 35px
+	background: rgb(0,0,0)  
+	background: rgba(0,0,0,.6)  
+	+trans(all .2s linear)
+	i
+		position: relative
+		display: inline-block	
+		+trans(all .2s linear)
+		+s(m-slider-close)
+	&:hover
+		background: #FFF 
+		i	
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				+s(m-slider-close-h)
+	&.is-close
+		i
+			+rotate(45deg)
+.m-slider__detail
+	float: left
+	max-width: 580px 
+	border-left: 30px solid rgb(0,0,0)
+	border-left: 30px solid rgba(0,0,0,.6)
+	font-size: 0
+.m-slider__cat
+	position: relative
+	z-index: 2 
+	span
+		display: inline-block
+		height: 5px
+		padding: 25px 30px 0 0
+		background: rgb(0,0,0)  
+		background: rgba(0,0,0,.6)
+		+fs(11)
+		text-transform: uppercase
+		color: #FFF
+.m-slider__title
+	display: inline-block
+	padding: 20px 30px 0 0 
+	background: rgb(0,0,0)  
+	background: rgba(0,0,0,.6)
+	span
+		display: block		
+		padding-bottom: 17px		
+		border-bottom: 4px solid #fff 
+		+fk
+		+fs(42)
+		color: #FFF
+		text-transform: uppercase 
+.m-slider__text
+	padding: 15px 30px 20px 0
+	background: rgb(0,0,0)  
+	background: rgba(0,0,0,.6)
+	+fs(14)
+	line-height: 1.5
+	color: #FFF 
+.m-slider__link
+	display: inline-block
+	height: 10px
+	padding: 0 30px 18px 0
+	background: rgb(0,0,0)  
+	background: rgba(0,0,0,.6)
+	a
+		display: block
+		height: 26px
+		padding: 0 13px
+		margin-top: -7px
+		background: #FFF
+		line-height: 26px
+		text-transform: uppercase
+		+fb
+		+fs(11)  
+		+trans(all .2s linear)
+		&:hover
+			background: #333 
+			color: #FFF 
