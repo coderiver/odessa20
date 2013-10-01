@@ -7,24 +7,40 @@
 	right: 0
 	height: 740px
 	overflow: hidden
+	+rt(840)
+		height: 400px 
+.pic-slider_inner
+	height: 175px
+	.pic-slider__item
+		box-shadow: 0 0 100px rgba(0,0,0,.8)
 .pic-slider__in
 	position: absolute
 	top: 0
 	left: 50%
 	width: 2440px
 	height: 740px
-	margin-left: -1170px 
+	margin-left: -1170px
+	background-repeat: no-repeat 
+	background-size: cover
+	+rt(840)
+		height: 400px 
 .pic-slider__items
 	width: 1170px
 	height: 740px
 	margin-left: 585px
 	overflow: visible !important
+	+rt(840)
+		height: 400px 
 .pic-slider__item
 	position: relative
 	width: 1170px
 	height: 740px
 	background-repeat: no-repeat 
 	background-size: cover
+	+rt(840)
+		height: 400px 
+.m-slider__content
+	overflow: hidden
 .m-slider__btn
 	float: left
 	margin: 0 6px 0 25px 
@@ -50,12 +66,18 @@
 	&.is-close
 		i
 			+rotate(45deg)
+	+rt(1200)
+		margin: 0 6px 0 40px
+	+rt(840)
+		display: none
 .m-slider__detail
 	float: left
 	max-width: 580px 
 	border-left: 30px solid rgb(0,0,0)
 	border-left: 30px solid rgba(0,0,0,.6)
 	font-size: 0
+	+rt(840)
+		border-left: 20px solid rgba(0,0,0,.6)
 .m-slider__cat
 	position: relative
 	z-index: 2 
@@ -68,12 +90,16 @@
 		+fs(11)
 		text-transform: uppercase
 		color: #FFF
+	+rt(840)
+		span
+			height: 2px
+			padding: 17px 17px 0 0
 .m-slider__title
 	display: inline-block
 	padding: 20px 30px 0 0 
 	background: rgb(0,0,0)  
 	background: rgba(0,0,0,.6)
-	span
+	a
 		display: block		
 		padding-bottom: 17px		
 		border-bottom: 4px solid #fff 
@@ -81,6 +107,9 @@
 		+fs(42)
 		color: #FFF
 		text-transform: uppercase 
+		+rt(840)
+			border: none
+			+fs(30)
 .m-slider__text
 	padding: 15px 30px 20px 0
 	background: rgb(0,0,0)  
@@ -88,6 +117,8 @@
 	+fs(14)
 	line-height: 1.5
 	color: #FFF 
+	+rt(840)
+		display: none
 .m-slider__link
 	display: inline-block
 	height: 10px
@@ -108,3 +139,5 @@
 		&:hover
 			background: #333 
 			color: #FFF 
+	+rt(840)
+		display: none

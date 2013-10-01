@@ -15,8 +15,10 @@
 <body>
 <!-- BEGIN .pic-slider -->
 <div class="pic-slider">
+	<button class="slider-prev"><i></i></button>
+	<button class="slider-next"><i></i></button>
 	<div class="pic-slider__in">
-		<div class="pic-slider__items cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".header__prev"  data-cycle-next=".header__next" data-cycle-slides="> div">
+		<div class="pic-slider__items cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-slides="> div">
 			<div class="pic-slider__item" style="background-image: url(img/slide2.jpg)"></div>
 			<div class="pic-slider__item" style="background-image: url(img/slide3.jpg)"></div>
 			<div class="pic-slider__item" style="background-image: url(img/slide1.jpg)"></div>
@@ -27,11 +29,10 @@
 </div>
 <!-- END .top -->
 <!-- BEGIN .wrap -->
-<div class="wrap">
+<div class="wrap">	
 	<!-- BEGIN .header -->
-	<div class="header">
-		<button class="header__prev"><i></i></button>
-		<button class="header__next"><i></i></button>
+	<div class="header">		
+		<div class="header__pager"></div>
 		<div class="header__top">
 			<div class="lang">				
 				<a class="is-active" href="#">рус</a>
@@ -74,12 +75,12 @@
 			</div>
 		</div>		
 		<!-- BEGIN .m-slider -->
-		<div class="m-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".header__prev"  data-cycle-next=".header__next" data-cycle-slides="> div">
+		<div class="m-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-pager-template="" data-cycle-slides="> div">
 			<div class="m-slider__content">
 				<button class="m-slider__btn js-m-slider"><i></i><em></em></button>
 				<div class="m-slider__detail">
 					<div class="m-slider__cat"><span>Сити бренд</span></div>
-					<div class="m-slider__title"><span>Победа</span></div>
+					<div class="m-slider__title"><a href="#">Победа</a></div>
 					<div class="m-slider__text">Обычно, когда талантливый режиссер берет в руки сценарий, написанный по не менее талантливой книге, он принимает на себя огромную ответственность. Книга уже популярна, а сделать не мене популярный фильм - очень сложная задача. Нет для режиссера хуже фразы «книга лучше».</div>
 					<div class="m-slider__link">
 						<a href="#">Подробнее</a>
@@ -90,7 +91,7 @@
 				<button class="m-slider__btn js-m-slider"><i></i><em></em></button>
 				<div class="m-slider__detail">
 					<div class="m-slider__cat"><span>Сити бренд</span></div>
-					<div class="m-slider__title"><span>Победа режиссера</span></div>
+					<div class="m-slider__title"><a href="#">Победа режиссера</a></div>
 					<div class="m-slider__text">Обычно, когда талантливый режиссер берет в руки сценарий, написанный по не менее талантливой книге, он принимает на себя огромную ответственность</div>
 					<div class="m-slider__link">
 						<a href="#">Подробнее</a>
@@ -101,7 +102,7 @@
 				<button class="m-slider__btn js-m-slider"><i></i><em></em></button>
 				<div class="m-slider__detail">
 					<div class="m-slider__cat"><span>Сити бренд</span></div>
-					<div class="m-slider__title"><span>Режиссерская победа</span></div>
+					<div class="m-slider__title"><a href="#">Режиссерская победа</a></div>
 					<div class="m-slider__text">Обычно, когда талантливый режиссер берет в руки сценарий, написанный по не менее талантливой книге, он принимает на себя огромную ответственность. Книга уже популярна, а сделать не мене популярный фильм - очень сложная задача. Нет для режиссера хуже фразы «книга лучше». Книга уже популярна, а сделать не мене популярный фильм - очень сложная задача. Нет для режиссера хуже фразы «книга лучше».</div>
 					<div class="m-slider__link">
 						<a href="#">Подробнее</a>
@@ -117,7 +118,7 @@
 		<div class="items__in">
 			<a class="block block_type-1" href="#">
 				<div class="block__pic">
-					<img src="img/pic2.jpg" alt="">
+					<img src="img/pic2.jpg" width="378" height="285" alt="">
 				</div>
 				<div class="block__head">
 					<div class="block__type is-line">Сити бренд</div>
@@ -126,9 +127,13 @@
 			</a>
 			<a class="block block_type-2" href="#">
 				<div class="block__pic">
-					<img src="img/pic3.jpg" alt="">
-					<img src="img/pic4.jpg" alt="">
-					<img src="img/pic5.jpg" alt="">
+					<div class="block__pic-big">
+						<img src="img/pic3.jpg" width="378" height="140" alt="">
+					</div>					
+					<div class="block__pic-in">
+						<img src="img/pic4.jpg" width="180" height="140" alt="">
+						<img src="img/pic5.jpg" width="180" height="140" alt="">
+					</div>					
 				</div>
 				<div class="block__head">
 					<div class="block__type is-line">Места</div>
@@ -138,7 +143,7 @@
 			</a>
 			<a class="block block_type-3" href="#">
 				<div class="block__pic">
-					<img src="img/pic6.jpg" alt="">
+					<img src="img/pic6.jpg" width="378" height="292" alt="">
 				</div>
 				<div class="block__head">
 					<div class="block__type">Лето 2013</div>
@@ -148,7 +153,7 @@
 			</a>
 			<a class="block block_type-4" href="#">
 				<div class="block__pic">
-					<img src="img/pic7.jpg" alt="">
+					<img src="img/pic7.jpg" width="774" height="292" alt="">
 				</div>
 				<div class="block__info">
 					<div class="block__head">
@@ -161,9 +166,13 @@
 			</a>
 			<a class="block block_type-5" href="#">
 				<div class="block__pic">
-					<img src="img/pic3.jpg" alt="">
-					<img src="img/pic4.jpg" alt="">
-					<img src="img/pic5.jpg" alt="">
+					<div class="block__pic-big">
+						<img src="img/pic3.jpg" width="378" height="140" alt="">
+					</div>					
+					<div class="block__pic-in">
+						<img src="img/pic4.jpg" width="180" height="140" alt="">
+						<img src="img/pic5.jpg" width="180" height="140" alt="">
+					</div>					
 				</div>
 				<div class="block__head">				
 					<div class="block__title is-line">Концерт в городе</div>
@@ -173,7 +182,7 @@
 			</a>
 			<a class="block block_type-6" href="#">
 				<div class="block__pic">
-					<img src="img/pic8.jpg" alt="">
+					<img src="img/pic8.jpg" width="378" height="450" alt="">
 				</div>
 				<div class="block__info">
 					<div class="block__head">
@@ -194,7 +203,7 @@
 			</a>
 			<a class="block block_type-8" href="#">
 				<div class="block__pic">
-					<img src="img/pic9.jpg" alt="">
+					<img src="img/pic9.jpg" width="774" height="292" alt="">
 				</div>
 				<div class="block__info">
 					<div class="block__head">
@@ -207,12 +216,12 @@
 			</a>
 			<a class="block block_type-9" href="#">
 				<div class="block__pic">
-					<img src="img/pic10.jpg" alt="">
+					<img src="img/pic10.jpg" width="300" height="250" alt="">
 				</div>
 			</a>
 			<a class="block block_type-3" href="#">
 				<div class="block__pic">
-					<img src="img/pic6.jpg" alt="">
+					<img src="img/pic6.jpg" width="378" height="292" alt="">
 				</div>
 				<div class="block__head">
 					<div class="block__type">Лето 2013</div>
@@ -228,14 +237,14 @@
 <!-- BEGIN .footer -->
 <footer class="footer">
 	<div class="footer__top">
+		<button class="footer__prev"><i></i></button>
+		<button class="footer__next"><i></i></button>
 		<div class="footer__in">
 			<div class="footer__instagram">
 				<span>мы в INSTAGRAM</span>
 				<a href="#">#odessa2.0</a>
 			</div>
-			<div class="footer__slider">
-				<button class="footer__prev"><i></i></button>
-				<button class="footer__next"><i></i></button>
+			<div class="footer__slider">				
 				<div class="footer__slider-in cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="0" data-cycle-prev=".footer__prev"  data-cycle-next=".footer__next" data-cycle-slides="> a">
 					<a href="#"><img src="img/pic1.jpg" alt=""></a>
 					<a href="#"><img src="img/pic1.jpg" alt=""></a>
@@ -264,7 +273,7 @@
 	<div class="footer__in">
 		<div class="title">Наши партнеры</div>
 		<div class="l">
-			<div class="l__column">
+			<div class="l__aside">
 				<div class="partners">
 					<div class="partners__info">
 						<div class="title title_line">Партнерам</div>
@@ -275,7 +284,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="l__aside">
+			<div class="l__column">
 				<div class="partners">					
 					<ul class="partners__list">
 						<li><a href="#"><img src="img/logo.jpg" alt=""></a></li>
@@ -290,12 +299,8 @@
 				</div>
 			</div>			
 		</div>
-		<div class="l">			
+		<div class="l">				
 			<div class="l__column">
-				<div class="copyright">© 2013, Odessa 2.0. Все права защищены. Использование материалов возможно только с указанием ссылки на сайт.</div>
-				<div class="created">Разработка сайта студия <a href="#"><i></i></a></div>
-			</div>
-			<div class="l__aside">
 				<a class="logo" href="#">ODESSA2.0 Устойчивое развитие города</a>
 				<nav class="footer__nav">
 					<ul>
@@ -305,6 +310,10 @@
 						<li><a href="#">Блог</a></li>                                      
 					</ul>
 				</nav>
+			</div>
+			<div class="l__aside">
+				<div class="copyright">© 2013, Odessa 2.0. Все права защищены. Использование материалов возможно только с указанием ссылки на сайт.</div>
+				<div class="created">Разработка сайта студия <a href="#"><i></i></a></div>
 			</div>
 		</div>
 	</div>

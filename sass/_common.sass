@@ -47,6 +47,8 @@ table
 	margin: 0 auto
 	+rt(1200)
 		width: 800px
+	+rt(840)
+		width: auto
 .title
 	margin-bottom: 18px
 	+fk
@@ -59,10 +61,9 @@ table
 		content: ""
 		position: absolute
 		bottom: -2px
-		left: 50%
+		left: 0
 		width: 90px
 		height: 4px
-		margin-left: -45px
 		background: #333 
 .header
 	position: relative
@@ -76,17 +77,26 @@ table
 		left: 50%
 		margin-left: -72px
 		+s(circle-white) 
+		+rt(840)
+			display: none
 	+rt(1200)
 		padding: 0
+	+rt(840)
+		height: 400px
+		padding: 0 10px
+.header_inner
+	height: 175px
+	&:after
+		display: none
+	.header__in
+		margin: 0 75px 0 0
 .header__top, .header__in
 	+clr	
 .header__top
 	padding-top: 25px
 	margin-bottom: 20px
-.header__prev, .header__next, .footer__prev, .footer__next
+.slider-prev, .slider-next, .footer__prev, .footer__next
 	position: absolute
-	top: 50%
-	margin-top: -37px
 	+trans(all .2s linear) 
 	z-index: 200 
 	i
@@ -96,28 +106,51 @@ table
 	&:hover
 		i
 			opacity: 1 
-.header__prev, .footer__prev
+	+rt(840)
+		display: none
+.slider-prev, .footer__prev
 	left: 50%
-	margin-left: -697px 
+	margin-left: -672px
 	+s(slider-prev)
 	i
 		+s(slider-prev-h)
 	+rt(1440)
-		margin-left: -575px
-	+rt(1200)
-		margin-left: -415px
-.header__next, .footer__next
+		left: 12px
+		margin: 0
+.slider-next, .footer__next
 	right: 50%
-	margin-right: -697px 
+	margin-right: -672px
 	+s(slider-next)
 	i
 		+s(slider-next-h)
 	+rt(1440)
-		margin-right: -575px
-	+rt(1200)
-		margin-right: -415px
+		right: 12px
+		margin: 0
+.slider-prev, .slider-next
+	top: 330px
 .footer__prev, .footer__next
-	top: 87px 
+	top: 140px 
+.header__pager
+	display: none
+	position: absolute
+	bottom: 30px
+	left: 0
+	right: 0
+	text-align: center 
+	z-index: 200 
+	span
+		display: inline-block
+		width: 10px
+		height: 10px
+		margin: 0 4px
+		border: 1px solid #fff
+		border-radius: 50%
+		cursor: pointer
+		+ht
+		&.cycle-pager-active
+			background: #FFF 
+	+rt(840)
+		display: block
 .lang
 	float: right
 	height: 26px
@@ -134,6 +167,9 @@ table
 			margin-right: 22px
 		&.is-active
 			color: #333 
+	+rt(840)
+		padding: 0
+		border: 0
 .social
 	float: right
 	margin-top: 2px
@@ -147,6 +183,8 @@ table
 		&:hover
 			i
 				opacity: 1 
+	+rt(840)
+		float: left
 .social__fb
 	+s(social-fb)
 	i
@@ -169,14 +207,24 @@ table
 	background: rgb(255,255,255) 
 	background: rgba(255,255,255,.6) 
 	z-index: 200
+	+rt(840)
+		margin: 0 75px 35px 0 
+		background: #FFF 
 .header__left
 	position: relative
 	float: left
+	height: 75px
 	margin-right: 38px
 	padding-right: 360px - 275px
-	background: #FFF  
+	background: #FFF 
+	.logo
+		+rt(840)
+			margin: 18px 0 0 14px
+			padding: 0  
+			+s(logo-s)
 .logo
 	display: block
+	margin: 16px 0 0 24px
 	+s(logo)
 	+ht
 .link-home
@@ -207,6 +255,8 @@ table
 			background: #fff 
 		i
 			+s(home-black)
+	+rt(840)
+		display: none
 .nav
 	position: relative
 	float: left
@@ -309,6 +359,11 @@ table
 						border-style: solid
 						border-width: 0 21px 14px 21px
 						border-color: transparent transparent #333 transparent
+	+rt(840)
+		top: 75px
+		right: -75px
+		& > ul
+			padding: 0
 .nav__bg
 	display: none
 	position: fixed
@@ -324,11 +379,14 @@ table
 	right: -75px
 	width: 75px
 	height: 75px
-	background: #63615f 
+	background: #333 
 	z-index: 30
 	i
 		display: inline-block
 		+s(nav-close)
+	+rt(840)
+		top: -75px
+		right: 0
 .menu	
 	display: none
 	float: right
@@ -349,6 +407,21 @@ table
 		background: #FFF 
 	+rt(1200)
 		display: block
+	+rt(840)
+		position: absolute
+		top: 0
+		right: -75px
+		width: 75px
+		padding: 0
+		background: #333 
+		text-align: center
+		span
+			display: none
+		i
+			margin: 0
+			+s(nav-link-white)
+		&:hover
+			background: #333 
 .search
 	position: absolute
 	top: 0
@@ -386,17 +459,25 @@ table
 		color: #FFF
 		opacity: 0 
 		+ph(#fff) 
+	+rt(840)
+		display: none 
 .footer
 	padding-top: 55px
 	.logo
 		float: left
-		margin-right: 40px
-		+s(logo-s)
+		margin: 0 40px 0 0
+		+rt(840)
+			display: none
 .footer__in
+	.l
+		+rt(840)
+			margin-bottom: 20px
 	.l__aside, .l__column
 		+rt(1200)
-			float: none
-			width: auto
+			width: 100%		
+	+rt(1200)
+		& > .title
+			display: none
 .footer__top
 	position: relative
 	background: #333
@@ -407,7 +488,11 @@ table
 		top: -39px
 		left: 50%
 		margin-left: -72px
-		+s(circle-black) 
+		+s(circle-black)
+		+rt(840)
+			display: none 
+	+rt(840)
+		margin-bottom: 57px
 .footer__instagram
 	padding: 15px 0 25px
 	text-align: center
@@ -426,6 +511,8 @@ table
 		+trans(color .2s linear)
 		&:hover
 			color: $ch 
+	+rt(840)
+		padding: 25px 0 60px 
 .footer__slider
 	position: relative
 	padding: 30px 0 110px
@@ -441,8 +528,8 @@ table
 		top: 0
 	&:before
 		bottom: 80px
-	+rt(1440)
-		padding: 30px 100px 110px
+	+rt(840)
+		display: none
 .footer__slider-in
 	a
 		margin-right: 4px 
@@ -451,14 +538,26 @@ table
 	margin-top: 5px
 	ul, li
 		float: left
+		+rt(840)
+			float: none
 	li
 		margin-right: 45px 
+		+rt(840)
+			margin: 0 0 15px 0
+			text-align: center
 	a
 		+fk
 		+trans(color .2s linear)
 		text-transform: uppercase
 		&:hover
 			color: $ch 
+	+rt(840)
+		float: none
+		margin: 0
+		padding-bottom: 5px
+		border-bottom: 4px solid #333 
+		a
+			+fs(18)
 .join
 	position: absolute
 	bottom: -47px
@@ -494,6 +593,14 @@ table
 	strong
 		+fk
 		font-size: 22px 
+	+rt(840)
+		width: 282px
+		height: 76px
+		margin-left: -141px 
+		span
+			padding: 17px 0 7px
+		strong
+			font-size: 20px
 //partners
 .partners__list
 	padding: 25px 0
@@ -512,10 +619,18 @@ table
 			+gray
 			&:hover
 				+gray0
+	+rt(1200)
+		border-width: 0 0 4px 0
+	+rt(840)
+		display: none
 .partners__info
 	padding: 25px 10px
 	border: 4px solid #333
 	text-align: center
+	.title_line
+		&:after
+			left: 50%
+			margin-left: -45px
 .partners__text
 	margin-bottom: 18px
 	line-height: 1.5
@@ -532,8 +647,12 @@ table
 	text-align: right
 	font-size: 12px
 	line-height: 1.5
+	+rt(1200)
+		text-align: center
 .copyright
 	margin-bottom: 10px
+	+rt(1200)
+		padding-top: 25px
 .created
 	margin-bottom: 30px
 	a
@@ -555,10 +674,15 @@ table
 	width: 1170px
 	overflow: hidden
 	+rt(1200)
-		width: 800px
+		width: 774px
+		margin: 0 auto
+	+rt(840)
+		width: 320px
 .items__in
 	margin-right: -50px
 .block
+	position: relative
+	display: block
 	margin-bottom: 18px
 	overflow: hidden
 	&:after
@@ -576,6 +700,12 @@ table
 		&:after
 			+scale(1)
 			opacity: 1
+	&.block_type-1, &.block_type-2, &.block_type-3, &.block_type-4, &.block_type-5, &.block_type-6, &.block_type-7, &.block_type-8, &.block_type-9
+		+rt(840)
+			width: 320px
+	&.block_type-7
+		+rt(840)
+			width: 312px
 .block__head, .block__text, .block__date
 	position: relative
 	z-index: 5 
@@ -607,20 +737,42 @@ table
 		margin-bottom: 18px
 .block__text
 	line-height: 1.5
+.block__pic
+	img
+		display: block
 .block_type-1, .block_type-6
 	width: 378px
 	height: 450px
 .block_type-1
 	.block__pic
 		margin-bottom: 18px
-		img
-			display: block
 	.block__head
 		padding: 0
 		+trans(all .2s linear)
-	&:hover
+	+rt(1200)
+		&:hover
+			.block__head			
+				padding-left: 20px
+	+rt(840)
+		height: auto
+		color: #FFF 
+		.block__pic
+			margin: 0
 		.block__head
-			padding-left: 20px
+			position: absolute
+			left: 20px
+			bottom: 20px
+		.block__type
+			&:after
+				+trans(background .2s linear)
+				background: #fff
+		&:hover
+			color: #000 
+			.block__head			
+				padding-left: 0			
+			.block__type
+				&:after
+					background: #000
 .block_type-2, .block_type-5
 	width: 774px
 	height: 140px
@@ -629,10 +781,19 @@ table
 	.block__pic
 		+clr
 		img
+			display: block
+	.block__pic-big
+		float: left
+		margin-right: 18px
+	.block__pic-in
+		float: left
+		img
 			float: left
 			margin-left: 18px
-			&:first-child	
-				margin: 0
+			&:first-child
+				margin-left: 0
+		+rt(840)
+			display: none	
 	.block__head
 		position: absolute
 		bottom: 20px
@@ -659,6 +820,15 @@ table
 				&.is-line
 					&:after
 						background: #000
+	+rt(1200)
+		width: 378px
+		height: auto
+		.block__pic-big
+			float: left
+			margin: 0 0 18px 0
+	+rt(840)
+		.block__pic-big
+			margin: 0
 .block_type-5
 	.block__head
 		bottom: auto
@@ -674,6 +844,43 @@ table
 	.block__head
 		padding-top: 18px
 		overflow: hidden
+	+rt(1200)
+		width: 378px
+		height: auto
+		.block__pic
+			float: none
+			margin: 0
+		.block__head, .block__text			
+			+trans(all .2s linear)
+		.block__head
+			padding-right: 20px
+		.block__text
+			padding-right: 20px
+		&:hover
+			.block__head
+				padding: 0 20px 0 20px
+			.block__text
+				padding: 0 20px 20px 20px
+	+rt(840)
+		color: #FFF 
+		.block__title
+			&:after
+				+trans(background .2s linear)
+				background: #fff 
+		.block__text
+			display: none
+		.block__head
+			position: absolute
+			left: 20px
+			bottom: 20px
+			padding: 0
+		&:hover
+			color: #000 
+			.block__title
+				&:after
+					background: #000
+			.block__head, .block__text
+				padding: 0
 .block_type-4, .block_type-6, .block_type-8
 	.block__title
 		padding: 0 20px 12px 
@@ -700,9 +907,14 @@ table
 		text-align: center
 	.block__text
 		margin-bottom: 12px	
+	+rt(1200)
+		width: 378px
+		.block__info
+			width: auto
+			right: 20px
 .block_type-8
 	.block__info
-		left: auto
+		left: 20px
 		right: 20px
 .block_type-6
 	.block__info
@@ -746,6 +958,9 @@ table
 	&:hover
 		padding: 4px
 		border: 0
+	+rt(840)
+		.block__info
+			padding: 20px
 .block_type-9
 	width: 378px
 	height: 292px
@@ -755,5 +970,6 @@ table
 	font-size: 0
 	img
 		position: relative
+		display: inline-block
 		vertical-align: middle
 		z-index: 5 

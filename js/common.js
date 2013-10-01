@@ -22,13 +22,13 @@ function nav() {
 	nav.mouseenter(function() {
 		var wnd_width = $(window).width();
 		if (wnd_width > 1200) {
-			nav_bg.fadeIn();
+			nav_bg.fadeIn(200);
 		};
 	});
-	nav_bg.mouseleave(function() {
+	nav_bg.mouseenter(function() {
 		var wnd_width = $(window).width();
 		if (wnd_width > 1200) {
-			nav_bg.fadeOut();
+			nav_bg.fadeOut(200);
 		};		
 	});
 	nav_open.click(function(){
