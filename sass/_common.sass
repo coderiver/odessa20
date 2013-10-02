@@ -41,7 +41,7 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
-.wrap, .footer__in
+.wrap, .footer__in, .header__center
 	position: relative
 	width: 1170px
 	margin: 0 auto
@@ -85,11 +85,19 @@ table
 		height: 400px
 		padding: 0 10px
 .header_inner
-	height: 175px
+	height: auto
+	padding: 0
+	background-repeat: no-repeat 
+	background-size: cover	
 	&:after
 		display: none
 	.header__in
 		margin: 0 75px 0 0
+.header__center
+	padding: 0 25px 30px
+	background-repeat: no-repeat 
+	background-size: cover
+	+box
 .header__top, .header__in
 	+clr	
 .header__top
@@ -749,10 +757,9 @@ table
 	.block__head
 		padding: 0
 		+trans(all .2s linear)
-	+rt(1200)
-		&:hover
-			.block__head			
-				padding-left: 20px
+	&:hover
+		.block__head			
+			padding-left: 20px
 	+rt(840)
 		height: auto
 		color: #FFF 
@@ -973,3 +980,43 @@ table
 		display: inline-block
 		vertical-align: middle
 		z-index: 5 
+//load-more
+@-webkit-keyframes anim1
+	from
+		+rotate(0deg)
+	to
+		+rotate(360deg)
+@-mox-keyframes anim1
+	from
+		+rotate(0deg)
+	to
+		+rotate(360deg)
+@-o-keyframes anim1
+	from
+		+rotate(0deg)
+	to
+		+rotate(360deg)
+.load-more
+	padding: 20px 0
+	text-align: center
+	button
+		background: none
+	i
+		display: inline-block
+		+s(load-more)
+		border-radius: 50%
+		border: 2px solid #cdcdcd
+		+rotate(0deg)		
+	span
+		display: block
+		padding-top: 5px
+		+fs(11)
+		text-transform: uppercase
+		+fb
+		+trans(color .2s linear)
+	&:hover
+		span
+			color: $ch
+	&.is-loading
+		i
+			+animation(anim1 1s infinite linear)
