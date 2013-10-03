@@ -3,7 +3,7 @@
 .bc
 	float: left
 	margin-top: 7px
-	+fs(10)
+	font-size: 10px
 	color: #FFF
 	li, a, span
 		float: left
@@ -24,12 +24,14 @@
 	a
 		display: block
 		padding: 12px
-		+fb
-		+fs(11)
-		text-transform: uppercase
+		+fs 
 		&:hover
-			background: #333
 			color: #FFF 
+	li
+		&.is-active
+			a
+				background: #333
+				color: #FFF 
 .aside-blocks 		
 	.items, .items__in
 		width: 378px
@@ -43,11 +45,6 @@
 	p
 		margin-bottom: 30px
 		line-height: 1.5
-.content__cat
-	margin-bottom: 15px
-	+fb
-	+fs(11)
-	text-transform: uppercase
 .content__l
 	margin-bottom: 25px
 	+clr
@@ -60,17 +57,13 @@
 		padding: 0 9px 0 0
 	p
 		margin-bottom: 20px
-.content__title, .content__message
-	margin-bottom: 20px
-	+fb
-	+fs(11)
-	text-transform: uppercase
 .content__message
 	padding: 15px 75px
 	margin-bottom: 45px
 	background: #facf00 
 	text-align: center
 	line-height: 2
+	+fs
 .content__list
 	margin-bottom: 60px
 	padding-left: 87px
@@ -90,7 +83,7 @@
 			+fk
 			text-align: center			
 			line-height: 60px			
-			+fs(22)
+			font-size: 22px
 	p, img
 		margin-bottom: 35px
 .content__definitions
@@ -106,9 +99,7 @@
 			position: relative
 			padding-left: 30px
 			margin-bottom: 20px
-			+fb
-			text-transform: uppercase
-			+fs(11)
+			+fs
 			line-height: 1.8
 			&:before
 				content: ""
@@ -118,13 +109,60 @@
 				width: 18px
 				height: 18px
 				background: #ffd509  
-		
+.content__quote 
+	margin-bottom: 40px	
+	+clr
+	p
+		float: left
+		margin: 0 23px 0 0
+		img, span
+			display: block
+		img
+			margin-bottom: 15px
+		span
+			margin-bottom: 5px
+			+fs
+	q
+		position: relative
+		display: table
+		padding-left: 55px
+		+fb
+		font-size: 16px
+		line-height: 1.5
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			+s(quote)
+.content__user
+	margin-bottom: 55px
+	text-align: center
+.content__user-in
+	position: relative
+	display: inline-block
+	vertical-align: top
+	img
+		display: block
+.content__user-detail
+	position: absolute
+	top: 50%
+	left: 100px
+	right: 100px
+	margin-top: -30px
+	padding: 20px 
+	border: 4px solid #333
+	background: #FFF 
+.content__video, .content__slider
+	margin-bottom: 50px
+.content__video-in
+	margin-bottom: 18px
 //banner-wide
 .banner-wide
 	margin: 60px 0 40px 0
 	text-align: center
 //author & widget & contacts
-.author, .widget, .contacts
+.author, .widget, .contacts, .partner
 	padding: 25px 0
 	border: 4px solid #333	
 	+clr
@@ -134,14 +172,11 @@
 			color: $ch 
 .author
 	border-width: 4px 0	
-.author__title
+.author__title, .partner__title
 	float: left
 	width: 120px
-	margin-right: 20px
-	+fb
-	+fs(11)
-	text-transform: uppercase
-	line-height: 2
+	margin-right: 25px
+	line-height: 1.8
 .author__pic
 	float: left
 	margin-right: 20px
@@ -150,12 +185,10 @@
 .author__detail
 	display: table
 .author__info
-	+fb
-	+fs(11)
-	text-transform: uppercase
+	+fs
 	li
 		margin-bottom: 5px	
-.widget
+.widget, .partner
 	border-width: 0 0 4px
 .widget__item, .contacts__column
 	float: left
@@ -164,42 +197,28 @@
 	+box
 	&:first-child
 		padding: 0 10px 0 0
-.widget__title
-	margin-bottom: 25px 
-	+fs(11)
-	+fb
-	text-transform: uppercase
 .contacts
 	border-width: 4px 0
 	margin-bottom: 45px
 	p
 		margin-bottom: 5px
-		+fs(11)
-		+fb
-		text-transform: uppercase
-
+		+fs
+.partner
+	margin-bottom: 40px
 //form
 .form
-	.title
-		padding-bottom: 22px
-		margin-bottom: 22px
+	.title, .title-sub
 		text-align: center
-		strong
-			display: block
-			padding-top: 10px
-			+fb
-			+fs(11)
-		&:after
-			left: 50%
-			margin-left: -45px
+	.title
+		margin-bottom: 10px
+.form__margin
+	margin-bottom: 90px 
 .form__in
 	width: 570px
 	margin: 0 auto
 .form__field
 	margin-bottom: 8px
-	+fs(11)
-	+fb
-	text-transform: uppercase
+	+fs
 	+clr
 	&.is-error
 		input, textarea
@@ -212,9 +231,7 @@
 		+box
 		+ph(#333)
 		text-align: center
-		+fs(11)
-		+fb
-		text-transform: uppercase
+		+fs
 	input
 		padding: 0 18px
 		height: 58px
@@ -310,13 +327,9 @@
 	padding: 20px
 	background: #FFF 
 	text-align: center
-.blog__text, .project__text
-	margin-bottom: 10px 
-	line-height: 1.5
-.blog__date, .blog__link-more, .project__date, .project__cat
-	+fs(11)
-	text-transform: uppercase
-	+fb
+.blog__detail, .project
+	.text
+		margin-bottom: 10px 
 .blog__link-more
 	position: absolute
 	bottom: 20px
@@ -324,6 +337,8 @@
 	padding: 5px 14px
 	background: #FFF 
 	+trans(all .2s linear)
+	+fs	
+	color: #000 
 	&:hover
 		background: #333
 		color: #FFF  
@@ -333,8 +348,56 @@
 	padding: 20px 100px 
 	background: #FFF 
 	text-align: center
-.project__cat 	
-	margin-bottom: 15px
+//news-list
+.news-list
+	margin-bottom: 60px
+	.slider__detail
+		margin-bottom: 25px
+.news-list__item
+	width: 772px
+	white-space: normal
+	+clr
+	.date
+		float: left
+		width: 105px
+		padding: 25px 10px
+		margin-right: 20px 
+		border: 4px solid #333
+		text-align: center
+		line-height: 2
+	.text
+		overflow: hidden
+//calendar
+.calendar
+	margin-bottom: 60px
 
+	.title-sub
+		margin: 0
+		line-height: 1.8
+	table
+		width: 100%		
+		margin-left: -4px
+		border-collapse: separate
+		border-spacing: 4px
+	tr
+		td
+			background: #f3f3f1 			
+			&:first-child
+				background: #facf00 
+		&:nth-child(2n)
+			td
+				background: #fff 				
+				&:first-child
+					background: #333
+					color: #FFF 
 
-	
+	td
+		padding: 10px 30px
+		vertical-align: middle
+//events
+.events__item
+	+clr
+.events__column
+	display: table
+	&:first-child
+		float: left

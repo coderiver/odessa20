@@ -6,11 +6,10 @@
 	//-webkit-text-size-adjust: none
 html, body 
 	height: 100%
-	font-size: 62.5%
 body
 	+f
 	font-weight: normal 
-	+fs(14)
+	font-size: 14px
 	color: #333 
 	line-height: 1.2
 	//-webkit-transform: translate3d(0,0,0)
@@ -21,10 +20,8 @@ a img, fieldset
 a
 	color: #333 
 	text-decoration: none
-	&:hover
-
 p
-	line-height: 1.2
+	line-height: 1.4
 li 
 	list-style: none
 textarea, button, select, input
@@ -49,22 +46,39 @@ table
 		width: 800px
 	+rt(840)
 		width: auto
-.title
+.title, .title-sub
 	margin-bottom: 18px
+	text-transform: uppercase
+	&.is-line, &.is-line-center, &.is-line-white
+		position: relative
+		padding-bottom: 18px
+		&:after
+			content: ""
+			position: absolute
+			bottom: -2px
+			left: 0			
+			width: 90px
+			height: 4px
+			background: #333
+	&.is-line-center
+		&:after
+			left: 50%
+			margin-left: -45px
+	&.is-line-white
+		&:after
+			background: #FFF 
+.title
 	+fk
 	font-size: 22px
+.title-sub, .date
+	+fb
+	font-size: 12px
+	letter-spacing: 2px 
+.date
 	text-transform: uppercase
-.title_line
-	position: relative
-	padding-bottom: 18px
-	&:after
-		content: ""
-		position: absolute
-		bottom: -2px
-		left: 0
-		width: 90px
-		height: 4px
-		background: #333 
+.text
+	font-size: 14px
+	line-height: 1.5
 .header
 	position: relative
 	height: 740px
@@ -89,6 +103,7 @@ table
 	padding: 0
 	background-repeat: no-repeat 
 	background-size: cover	
+	box-shadow: 0 -1px 0 white inset
 	&:after
 		display: none
 	.header__in
@@ -97,6 +112,7 @@ table
 	padding: 0 25px 30px
 	background-repeat: no-repeat 
 	background-size: cover
+	box-shadow: 0 -1px 0 white inset
 	+box
 .header__top, .header__in
 	+clr	
@@ -167,9 +183,7 @@ table
 	line-height: 26px
 	a
 		float: left
-		text-transform: uppercase
-		+fb
-		+fs(11)
+		+fs
 		color: #FFF 
 		&:first-child
 			margin-right: 22px
@@ -296,7 +310,7 @@ table
 				padding: 0 23px
 				line-height: 75px
 				+fk
-				+fs(14)
+				font-size: 14px
 			ul
 				position: absolute
 				top: 76px
@@ -315,7 +329,7 @@ table
 					display: block
 					padding: 10px 0
 					white-space: nowrap
-					+fs(11)
+					font-size: 11px
 					+fb
 	+rt(1200)
 		display: none
@@ -334,7 +348,7 @@ table
 				text-align: center
 				& > a
 					height: 60px
-					+fs(18)
+					font-size: 18px
 					line-height: 60px
 				ul
 					display: block
@@ -404,7 +418,7 @@ table
 	background: none 
 	text-transform: uppercase
 	+fk
-	+fs(14)
+	font-size: 14px
 	i, span
 		display: inline-block		
 		vertical-align: middle
@@ -462,8 +476,7 @@ table
 		height: 75px
 		padding: 0 20px
 		background: rgb(51,51,51)
-		font-size: 11px
-		text-transform: uppercase
+		+fs
 		color: #FFF
 		opacity: 0 
 		+ph(#fff) 
@@ -507,13 +520,11 @@ table
 	span
 		display: block
 		margin-bottom: 8px
-		+fb
-		+fs(11)
-		text-transform: uppercase
+		+fs
 		color: #FFF
 	a
 		+fk
-		+fs(22)
+		font-size: 22px
 		text-transform: uppercase
 		color: #FFF
 		+trans(color .2s linear)
@@ -565,7 +576,7 @@ table
 		padding-bottom: 5px
 		border-bottom: 4px solid #333 
 		a
-			+fs(18)
+			font-size: 18px
 .join
 	position: absolute
 	bottom: -47px
@@ -635,7 +646,7 @@ table
 	padding: 25px 10px
 	border: 4px solid #333
 	text-align: center
-	.title_line
+	.is-line-center
 		&:after
 			left: 50%
 			margin-left: -45px
@@ -644,9 +655,7 @@ table
 	line-height: 1.5
 .partners__link
 	a
-		+fb	
-		font-size: 11px
-		text-transform: uppercase
+		+fs
 		+trans(color .2s linear)
 		&:hover
 			color: $ch 
@@ -704,47 +713,26 @@ table
 		opacity: 0		
 		+scale(2)
 		+trans(all .2s linear) 
+	.title-sub, .title
+		&:after
+			+trans(background .2s linear)
 	&:hover
 		&:after
 			+scale(1)
 			opacity: 1
+		.title-sub, .title
+			&.is-line-white
+				&:after
+					background: #000
 	&.block_type-1, &.block_type-2, &.block_type-3, &.block_type-4, &.block_type-5, &.block_type-6, &.block_type-7, &.block_type-8, &.block_type-9
 		+rt(840)
 			width: 320px
 	&.block_type-7
 		+rt(840)
 			width: 312px
-.block__head, .block__text, .block__date
-	position: relative
-	z-index: 5 
-.block__type, .block__title
-	&.is-line
+	.block__in, .text, .date
 		position: relative
-		padding-bottom: 18px
-		&:after
-			content: ""
-			position: absolute
-			bottom: -2px
-			left: 0
-			width: 90px
-			height: 4px
-			background: #333
-.block__type, .block__date
-	+fb	
-	font-size: 12px
-	text-transform: uppercase
-.block__type
-	margin-bottom: 18px 
-.block__title
-	padding-right: 50px
-	+fk
-	font-size: 22px
-	text-transform: uppercase
-	line-height: 1.4
-	&.is-line
-		margin-bottom: 18px
-.block__text
-	line-height: 1.5
+		z-index: 5 
 .block__pic
 	img
 		display: block
@@ -754,30 +742,32 @@ table
 .block_type-1
 	.block__pic
 		margin-bottom: 18px
-	.block__head
-		padding: 0
+	.block__in
+		padding-right: 50px
 		+trans(all .2s linear)
+	.title
+		margin: 0
 	&:hover
-		.block__head			
-			padding-left: 20px
+		.block__in			
+			padding-left: 20px		
 	+rt(840)
 		height: auto
 		color: #FFF 
 		.block__pic
 			margin: 0
-		.block__head
+		.block__in
 			position: absolute
 			left: 20px
 			bottom: 20px
-		.block__type
+		.title-sub
 			&:after
 				+trans(background .2s linear)
 				background: #fff
 		&:hover
 			color: #000 
-			.block__head			
-				padding-left: 0			
-			.block__type
+			.block__in		
+				padding-left: 0	
+			.title-sub
 				&:after
 					background: #000
 .block_type-2, .block_type-5
@@ -801,32 +791,22 @@ table
 				margin-left: 0
 		+rt(840)
 			display: none	
-	.block__head
+	.block__in
 		position: absolute
 		bottom: 20px
 		left: 25px
-		.block__type, .block__title
-			&.is-line				
-				&:after	
-					+trans(background .2s linear)
-					background: #fff					
-	.block__text
+	.text
 		opacity: 0
 		position: absolute
 		bottom: 20px
 		right: 20px
 		left: 378px + 18px
 		+trans(opacity .2s linear)
-		color: #000
+		color: #000	
 	&:hover
 		color: #000 
-		.block__text
+		.text
 			opacity: 1
-		.block__head
-			.block__type, .block__title
-				&.is-line
-					&:after
-						background: #000
 	+rt(1200)
 		width: 378px
 		height: auto
@@ -837,10 +817,10 @@ table
 		.block__pic-big
 			margin: 0
 .block_type-5
-	.block__head
+	.block__in
 		bottom: auto
 		top: 20px
-	.block__type
+	.title-sub
 		margin: 0
 .block_type-3
 	width: 774px
@@ -848,7 +828,7 @@ table
 	.block__pic
 		float: left
 		margin-right: 18px
-	.block__head
+	.block__in
 		padding-top: 18px
 		overflow: hidden
 	+rt(1200)
@@ -857,53 +837,57 @@ table
 		.block__pic
 			float: none
 			margin: 0
-		.block__head, .block__text			
+		.block__in, .text			
 			+trans(all .2s linear)
-		.block__head
+		.block__in
 			padding-right: 20px
-		.block__text
+		.text
 			padding-right: 20px
 		&:hover
-			.block__head
+			.block__in
 				padding: 0 20px 0 20px
-			.block__text
-				padding: 0 20px 20px 20px
+			.text
+				padding: 0 20px 20px 0
 	+rt(840)
 		color: #FFF 
-		.block__title
+		.title
 			&:after
 				+trans(background .2s linear)
 				background: #fff 
-		.block__text
+		.text
 			display: none
-		.block__head
+		.block__in
 			position: absolute
 			left: 20px
 			bottom: 20px
 			padding: 0
 		&:hover
 			color: #000 
-			.block__title
+			.title
 				&:after
 					background: #000
-			.block__head, .block__text
+			.block__in, .text
 				padding: 0
 .block_type-4, .block_type-6, .block_type-8
-	.block__title
+	.title
 		padding: 0 20px 12px 
-	.block__type
+	.title-sub
 		margin-bottom: 7px
-	.block__title
+	.title
 		margin-bottom: 12px
-	.block__type, .block__title
-		&.is-line
-			&:after
-				left: 50%
-				margin-left: -45px	
+	.block__in
+		+trans(background .2s linear)
+	&:hover
+		.block__in
+			background: none 
+.block_type-8
+	.block__in
+		left: auto
+		right: 20px
 .block_type-4, .block_type-8
 	width: 774px
 	height: 292px	
-	.block__info
+	.block__in
 		position: absolute
 		top: 20px
 		left: 20px
@@ -912,19 +896,16 @@ table
 		padding: 19px
 		background: #FFF 
 		text-align: center
-	.block__text
+	.text
 		margin-bottom: 12px	
 	+rt(1200)
 		width: 378px
-		.block__info
+		.block__in
 			width: auto
+			left: 20px
 			right: 20px
-.block_type-8
-	.block__info
-		left: 20px
-		right: 20px
 .block_type-6
-	.block__info
+	.block__in
 		position: absolute
 		top: 105px
 		left: 20px
@@ -935,16 +916,16 @@ table
 		text-align: center
 		+trans(all .2s linear)
 		z-index: 5 
-	.block__type, .block__title
+	.title-sub, .title
 		&.is-line
 			&:after
 				+trans(background .2s linear)
 				background: #FFF 
 	&:hover
-		.block__info
+		.block__in
 			border: 4px solid #000
 			color: #000
-		.block__type, .block__title
+		.title-sub, .title
 			&.is-line
 				&:after
 					background: #000
@@ -952,21 +933,16 @@ table
 	width: 370px
 	height: 284px
 	border: 4px solid #333
-	.block__info
+	.block__in
 		padding: 35px 20px 0
 		text-align: center 
-	.block__type, .block__title
-		&.is-line
-			&:after
-				left: 50%
-				margin-left: -45px
-	.block__title
+	.title
 		padding: 0 20px 18px 
 	&:hover
 		padding: 4px
 		border: 0
 	+rt(840)
-		.block__info
+		.block__in
 			padding: 20px
 .block_type-9
 	width: 378px
@@ -1010,9 +986,7 @@ table
 	span
 		display: block
 		padding-top: 5px
-		+fs(11)
-		text-transform: uppercase
-		+fb
+		+fs
 		+trans(color .2s linear)
 	&:hover
 		span
@@ -1020,3 +994,41 @@ table
 	&.is-loading
 		i
 			+animation(anim1 1s infinite linear)
+//slider
+.slider	
+	.title-sub, .title
+		display: table
+		margin: 0
+	.title-sub
+		height: 16px
+		line-height: 16px
+.slider__in
+	margin-bottom: 18px
+	font-size: 0
+.slider__detail
+	+clr
+.slider__nav
+	float: right
+	margin-left: 20px
+.slider__prev, .slider__next
+	float: left
+	&.disabled
+		cursor: default
+.slider__prev
+	+s(slider-prev)
+	&:hover
+		+s(slider-prev-h)
+	&.disabled
+		+s(slider-prev-d)
+.slider__next
+	+s(slider-next)
+	&:hover
+		+s(slider-next-h)
+	&.disabled
+		+s(slider-next-d)
+.slider__current
+	float: left
+	height: 16px
+	padding: 0 17px
+	line-height: 16px 
+	+fs

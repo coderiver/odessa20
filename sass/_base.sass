@@ -59,9 +59,11 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	background-size: cover 
 	background-position: 50% 50%
 //font-size
-@mixin fs($sizeValue: 1.6)
-	font-size: $sizeValue + px
-	font-size: ($sizeValue/10) + rem
+@mixin fs
+	+fb
+	font-size: 11px
+	text-transform: uppercase
+	letter-spacing: 2px
 //font
 @font-face
 	font-family: 'DroidSansReg'

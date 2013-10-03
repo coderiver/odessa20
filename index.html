@@ -18,7 +18,7 @@
 	<button class="slider-prev"><i></i></button>
 	<button class="slider-next"><i></i></button>
 	<div class="pic-slider__in">
-		<div class="pic-slider__items cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-slides="> div">
+		<div class="pic-slider__items cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-slides="> div" data-cycle-pause-on-hover=".m-slider__content">
 			<div class="pic-slider__item" style="background-image: url(img/slide2.jpg)"></div>
 			<div class="pic-slider__item" style="background-image: url(img/slide3.jpg)"></div>
 			<div class="pic-slider__item" style="background-image: url(img/slide1.jpg)"></div>
@@ -29,7 +29,7 @@
 <!-- BEGIN .wrap -->
 <div class="wrap">	
 	<!-- BEGIN .header -->
-	<div class="header">		
+	<div class="header">
 		<div class="header__pager"></div>
 		<div class="header__top">
 			<div class="lang">				
@@ -73,7 +73,7 @@
 			</div>
 		</div>		
 		<!-- BEGIN .m-slider -->
-		<div class="m-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-pager-template="" data-cycle-slides="> div">
+		<div class="m-slider cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-carousel-visible="1" data-cycle-prev=".slider-prev"  data-cycle-next=".slider-next" data-cycle-pager=".header__pager" data-cycle-pager-template="" data-cycle-slides="> div" data-cycle-pause-on-hover=".m-slider__content">
 			<div class="m-slider__content">
 				<button class="m-slider__btn js-m-slider"><i></i><em></em></button>
 				<div class="m-slider__detail">
@@ -118,9 +118,9 @@
 				<div class="block__pic">
 					<img src="img/pic2.jpg" width="378" height="285" alt="">
 				</div>
-				<div class="block__head">
-					<div class="block__type is-line">Сити бренд</div>
-					<div class="block__title">Топ-10 памятников архитектуры</div>
+				<div class="block__in">
+					<div class="title-sub is-line">Сити бренд</div>
+					<div class="title">Топ-10 памятников архитектуры</div>
 				</div>
 			</a>
 			<a class="block block_type-2" href="#">
@@ -133,33 +133,31 @@
 						<img src="img/pic5.jpg" width="180" height="140" alt="">
 					</div>					
 				</div>
-				<div class="block__head">
-					<div class="block__type is-line">Места</div>
-					<div class="block__title">Grill Meat</div>
+				<div class="block__in">
+					<div class="title-sub is-line-white">Места</div>
+					<div class="title">Grill Meat</div>
 				</div>
-				<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
 			</a>
 			<a class="block block_type-3" href="#">
 				<div class="block__pic">
 					<img src="img/pic6.jpg" width="378" height="292" alt="">
 				</div>
-				<div class="block__head">
-					<div class="block__type">Лето 2013</div>
-					<div class="block__title is-line">Календарь событий в Одессе</div>
-				</div>
-				<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				<div class="block__in">
+					<div class="title-sub">Лето 2013</div>
+					<div class="title is-line">Календарь событий в Одессе</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				</div>				
 			</a>
 			<a class="block block_type-4" href="#">
 				<div class="block__pic">
 					<img src="img/pic7.jpg" width="774" height="292" alt="">
 				</div>
-				<div class="block__info">
-					<div class="block__head">
-						<div class="block__type">Архитектура</div>
-						<div class="block__title is-line">Проект: Реконструкция лестницы</div>
-					</div>
-					<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
-					<div class="block__date">25.07.2013 - 08.08.2013</div>
+				<div class="block__in">
+					<div class="title-sub">Архитектура</div>
+					<div class="title is-line-center">Проект: Реконструкция лестницы</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+					<div class="date">25.07.2013 - 08.08.2013</div>
 				</div>			
 			</a>
 			<a class="block block_type-5" href="#">
@@ -172,44 +170,38 @@
 						<img src="img/pic5.jpg" width="180" height="140" alt="">
 					</div>					
 				</div>
-				<div class="block__head">				
-					<div class="block__title is-line">Концерт в городе</div>
-					<div class="block__type">Лето 2013</div>
-				</div>
-				<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				<div class="block__in">				
+					<div class="title is-line-white">Концерт в городе</div>
+					<div class="date">Лето 2013</div>					
+				</div>				
+				<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
 			</a>
 			<a class="block block_type-6" href="#">
 				<div class="block__pic">
 					<img src="img/pic8.jpg" width="378" height="450" alt="">
 				</div>
-				<div class="block__info">
-					<div class="block__head">
-						<div class="block__type">Архитектура</div>
-						<div class="block__title is-line">Проект: Реконструкция лестницы</div>
-					</div>
-					<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+				<div class="block__in">
+					<div class="title-sub">Архитектура</div>
+					<div class="title is-line-center is-line-white">Проект: Реконструкция лестницы</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
 				</div>
 			</a>
 			<a class="block block_type-7" href="#">
-				<div class="block__info">
-					<div class="block__head">
-						<div class="block__type">Лето 2013</div>
-						<div class="block__title is-line">Календарь событий в Одессе</div>
-					</div>
-					<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				<div class="block__in">
+					<div class="title-sub">Лето 2013</div>
+					<div class="title is-line-center">Календарь событий в Одессе</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
 				</div>
 			</a>
 			<a class="block block_type-8" href="#">
 				<div class="block__pic">
 					<img src="img/pic9.jpg" width="774" height="292" alt="">
 				</div>
-				<div class="block__info">
-					<div class="block__head">
-						<div class="block__type">Архитектура</div>
-						<div class="block__title is-line">Проект: Реконструкция лестницы</div>
-					</div>
-					<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
-					<div class="block__date">25.07.2013 - 08.08.2013</div>
+				<div class="block__in">
+					<div class="title-sub">Архитектура</div>
+					<div class="title is-line-center">Проект: Реконструкция лестницы</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+					<div class="date">25.07.2013 - 08.08.2013</div>
 				</div>			
 			</a>
 			<a class="block block_type-9" href="#">
@@ -221,11 +213,11 @@
 				<div class="block__pic">
 					<img src="img/pic6.jpg" width="378" height="292" alt="">
 				</div>
-				<div class="block__head">
-					<div class="block__type">Лето 2013</div>
-					<div class="block__title is-line">Календарь событий в Одессе</div>
-				</div>
-				<div class="block__text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				<div class="block__in">
+					<div class="title-sub">Лето 2013</div>
+					<div class="title is-line">Календарь событий в Одессе</div>
+					<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+				</div>				
 			</a>
 		</div>
 	</div>
@@ -274,7 +266,7 @@
 			<div class="l__aside">
 				<div class="partners">
 					<div class="partners__info">
-						<div class="title title_line">Партнерам</div>
+						<div class="title is-line-center">Партнерам</div>
 						<div class="partners__text">Развитие города важно всем одесситам - как жителям так и представителям бизнеса. Поєтому приглаешм всех социально активных бизнесменов присоедениться к нашему движению.</div>
 						<div class="partners__link">
 							<a href="#">Читать подробнее</a>
