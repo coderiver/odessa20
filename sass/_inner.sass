@@ -14,6 +14,8 @@
 			color: $ch 
 	span
 		margin: 0 2px
+	+rt(840)
+		display: none
 .aside-nav
 	margin-bottom: 20px
 	background: url(../img/bg.jpg)
@@ -57,6 +59,12 @@
 		padding: 0 9px 0 0
 	p
 		margin-bottom: 20px
+	+rt(840)
+		float: none
+		width: auto
+		padding: 0
+		&:first-child
+			padding: 0
 .content__message
 	padding: 15px 75px
 	margin-bottom: 45px
@@ -86,6 +94,18 @@
 			font-size: 22px
 	p, img
 		margin-bottom: 35px
+	img
+		max-width: 600px
+		width: 100%
+	+rt(840)
+		padding-left: 47px
+		li
+			&:before
+				left: -47px
+				width: 28px
+				height: 28px
+				line-height: 28px
+				font-size: 12px   
 .content__definitions
 	margin-bottom: 10px	
 	+clr
@@ -109,6 +129,10 @@
 				width: 18px
 				height: 18px
 				background: #ffd509  
+	+rt(840)
+		dt
+			float: none
+			width: auto
 .content__quote 
 	margin-bottom: 40px	
 	+clr
@@ -135,6 +159,16 @@
 			top: 0
 			left: 0
 			+s(quote)
+	+rt(840)
+		p
+			float: none
+			margin: 0
+			overflow: hidden
+			img
+				float: left
+				margin-right: 10px 
+		q
+			display: block
 .content__user
 	margin-bottom: 55px
 	text-align: center
@@ -144,6 +178,10 @@
 	vertical-align: top
 	img
 		display: block
+		max-width: 600px
+		width: 100%
+	+rt(840)
+		margin: 0 -10px 20px
 .content__user-detail
 	position: absolute
 	top: 50%
@@ -153,14 +191,46 @@
 	padding: 20px 
 	border: 4px solid #333
 	background: #FFF 
+	+rt(840)
+		left: 10px
+		right: 10px
 .content__video, .content__slider
 	margin-bottom: 50px
+.content__slider
+	.slider
+		margin: 0 auto
+		+rt(1200)
+			width: 800px
+		+rt(840)
+			width: 320px			
+	.slider__item
+		width: 772px
+		img
+			width: 100%
+			height: auto
+		+rt(1200)
+			width: 800px
+		+rt(840)
+			width: 320px
+	.slider__detail
+		+rt(840)
+		padding: 0 10px
+	+rt(840)
+		margin: 0 -10px 20px	
+.content__video
+	margin: 0 -10px 20px
+	.title-sub
+		+rt(840)
+			padding: 0 10px
 .content__video-in
 	margin-bottom: 18px
+	overflow: hidden
 //banner-wide
 .banner-wide
 	margin: 60px 0 40px 0
 	text-align: center
+	+rt(840)
+		display: none
 //author & widget & contacts
 .author, .widget, .contacts, .partner
 	padding: 25px 0
@@ -172,24 +242,42 @@
 			color: $ch 
 .author
 	border-width: 4px 0	
+.author, .partner
+	+rt(840)
+		margin: 0 -10px
+		padding: 25px 10px
 .author__title, .partner__title
 	float: left
 	width: 120px
 	margin-right: 25px
 	line-height: 1.8
+	+rt(840)
+		float: none
+		width: auto
+		margin: 0 0 10px 0
+	.title-sub
+		margin: 0
 .author__pic
 	float: left
+	width: 180px
 	margin-right: 20px
 	img
 		display: block
+		width: 100%
+	+rt(840)
+		width: 110px
+		margin-right: 10px
 .author__detail
-	display: table
+	overflow: hidden
 .author__info
 	+fs
 	li
 		margin-bottom: 5px	
 .widget, .partner
 	border-width: 0 0 4px
+.widget
+	+rt(840)
+		display: none
 .widget__item, .contacts__column
 	float: left
 	width: 50%
@@ -197,12 +285,21 @@
 	+box
 	&:first-child
 		padding: 0 10px 0 0
+	+rt(840)
+		float: none
+		width: auto
+		padding: 25px 10px 0		
+		&:first-child
+			padding: 0 10px 25px
+			border-bottom: 4px solid #333 
 .contacts
 	border-width: 4px 0
 	margin-bottom: 45px
 	p
 		margin-bottom: 5px
 		+fs
+	+rt(840)
+		margin: 0 -10px 45px
 .partner
 	margin-bottom: 40px
 //form
@@ -211,11 +308,13 @@
 		text-align: center
 	.title
 		margin-bottom: 10px
-.form__margin
+.form_margin
 	margin-bottom: 90px 
 .form__in
 	width: 570px
 	margin: 0 auto
+	+rt(840)
+		width: 300px
 .form__field
 	margin-bottom: 8px
 	+fs
@@ -287,14 +386,19 @@
 	margin-right: 25px
 	line-height: 58px
 	text-align: right
+	+rt(840)
+		width: 90px
 .form__btn
 	text-align: center
+	.btn
+		width: 362px
+		+rt(840)
+			width: 300px
 .btn	
 	border: 4px solid #333
 	background: url(../img/bg.jpg)
 	span
 		display: block
-		width: 362px
 		height: 64px
 		line-height: 64px
 		+fk
@@ -306,11 +410,27 @@
 		span
 			background: #ffd50b 
 //blog & project
+.blog
+	+rt(840)
+		margin: 0 -10px
+.blog__in
+	+rt(840)
+		width: 320px
+		margin: 0 auto
 .blog__item
 	position: relative
 	margin-bottom: 20px
 	img
 		display: block
+		+rt(1200)
+			width: 100%
+		+rt(840)
+			width: auto
+	+rt(840)
+		width: 320px
+		overflow: hidden
+		.blog__link-more
+			display: none	
 .blog__item_mod
 	.blog__detail
 		left: auto
@@ -327,6 +447,10 @@
 	padding: 20px
 	background: #FFF 
 	text-align: center
+	+rt(840)
+		width: auto
+		right: 20px
+		left: 20px
 .blog__detail, .project
 	.text
 		margin-bottom: 10px 
@@ -348,11 +472,18 @@
 	padding: 20px 100px 
 	background: #FFF 
 	text-align: center
+	+rt(1200)
+		width: auto
+	+rt(840)
+		padding: 20px
 //news-list
 .news-list
 	margin-bottom: 60px
 	.slider__detail
 		margin-bottom: 25px
+	.slider
+		+rt(840)
+			width: 300px
 .news-list__item
 	width: 772px
 	white-space: normal
@@ -367,10 +498,21 @@
 		line-height: 2
 	.text
 		overflow: hidden
+	+rt(1200)
+		width: 800px
+	+rt(840)
+		width: 300px
+		.date
+			float: none
+			margin: 0 0 10px
+			width: auto
+			padding: 0
+			border: none
+			text-align: left
+			line-height: 1.2
 //calendar
 .calendar
 	margin-bottom: 60px
-
 	.title-sub
 		margin: 0
 		line-height: 1.8
@@ -379,6 +521,9 @@
 		margin-left: -4px
 		border-collapse: separate
 		border-spacing: 4px
+		+rt(840)
+			margin-left: -2px
+			border-spacing: 2px
 	tr
 		td
 			background: #f3f3f1 			
@@ -394,10 +539,218 @@
 	td
 		padding: 10px 30px
 		vertical-align: middle
+		+rt(840)
+			padding: 10px
+			&:first-child
+				text-align: center
 //events
+.events
+	margin-bottom: 60px
 .events__item
+	margin-bottom: 40px
 	+clr
 .events__column
 	display: table
+	margin-bottom: 4px
 	&:first-child
 		float: left
+		margin-right: 28px
+		+rt(840)
+			float: none
+			margin: 0 0 15px 0
+	+rt(840)
+		display: block
+		margin-bottom: 15px
+.events__pic 		
+	img
+		display: block
+		+rt(840)
+			width: 100%
+.events__link
+	clear: both
+	a
+		display: block
+		width: 180px
+		height: 26px
+		background: #facf00
+		text-align: center
+		+fs 
+		line-height: 26px
+		+trans(all .2s linear)
+		&:hover
+			background: #333
+			color: #fff  
+	+rt(840)
+		text-align: center
+		a
+			display: inline-block
+.events__detail
+	margin-bottom: 15px
+	.title-sub
+		margin: 0
+	td
+		padding-bottom: 5px
+		&:first-child
+			padding-right: 25px 
+			+rt(840)
+				padding-right: 10px
+.events__source
+	a
+		+fs
+		color: $ch 
+		+trans(color .2s linear)
+		&:hover
+			color: #333 
+//map
+.map
+	margin-bottom: 45px
+.map__in
+	+rt(840)
+		margin: 0 -10px
+//category
+.category
+	position: relative
+	width: 730px
+	margin: 35px auto 30px
+	text-align: center
+	&:after
+		content: ""
+		position: absolute
+		bottom: -60px
+		left: 50%
+		margin-left: -72px
+		+s(circle-white) 
+		+rt(840)
+			display: none
+	.title, .title-sub
+		background: rgb(0,0,0) 
+		background: rgba(0,0,0,.6) 
+		color: #FFF 
+	.title
+		display: inline-block
+		padding: 20px 55px 18px
+		margin: 0
+		font-size: 42px
+		letter-spacing: 4px
+		&:after
+			width: 170px
+			margin-left: -65px
+	.title-sub
+		padding: 20px 30px 30px 
+		line-height: 1.8
+	+rt(840)
+		width: auto
+//join-title
+.join-title
+	position: relative
+	width: 700px
+	margin: 55px auto 25px
+	text-align: center
+	font-size: 0
+	&:after
+		content: ""
+		position: absolute
+		bottom: -55px
+		left: 50%
+		margin-left: -72px
+		+s(circle-white) 
+		+rt(840)
+			display: none
+	.title, .title-sub
+		background: rgb(0,0,0) 
+		background: rgba(0,0,0,.6) 
+		color: #FFF 
+	.title
+		padding: 20px 0
+		margin: 0
+		font-size: 42px
+		letter-spacing: 4px 
+		span
+			display: block
+	.title-sub
+		display: inline-block
+		padding: 0 90px 35px
+		&:after
+			bottom: 15px
+	+rt(840)
+		width: auto
+//join-nav
+.join-nav
+	display: none
+	margin-bottom: 30px 
+	+rt(840)
+		display: block
+.join-nav__text
+	margin-bottom: 20px
+	text-align: center
+	color: #FFF
+	+fs 
+	line-height: 1.8
+.join-nav__btns
+	text-align: center
+	font-size: 0
+	button
+		width: 12px
+		height: 12px
+		margin: 0 4px
+		background: #FFF
+		border-radius: 50%
+		vertical-align: top
+		&.is-active
+			background: none
+			border: 1px solid #fff 
+//tabs
+.tabs
+	margin-bottom: 40px
+.tabs__nav
+	margin-bottom: 55px
+	font-size: 0
+	button
+		position: relative
+		width: 33.33%
+		height: 80px
+		padding: 0 30px
+		background: #FFF 
+		vertical-align: top
+		+fs
+		line-height: 1.8
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 90px
+			height: 4px
+			margin-left: -45px
+			background: #333 
+		&.is-active
+			background: url(../img/bg.jpg) 
+	+rt(1200)
+		button
+			padding: 0 10px
+.tabs__text
+	margin-bottom: 40px
+	-moz-column-count: 2
+	-webkit-column-count: 2
+	column-count: 2
+	-moz-column-gap: 20px
+	-webkit-column-gap: 20px
+	column-gap: 20px
+	+rt(840)
+		margin-bottom: 40px
+		-moz-column-count: 1
+		-webkit-column-count: 1
+		column-count: 1
+		-moz-column-gap: 0
+		-webkit-column-gap: 0
+		column-gap: 0
+	p
+		margin-bottom: 15px
+//joining
+.joining
+	+rt(840)
+		padding: 0 10px
+		.tabs__nav
+			display: none
+
+	 

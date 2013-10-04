@@ -67,6 +67,9 @@ table
 	&.is-line-white
 		&:after
 			background: #FFF 
+	&.is-responsive
+		+rt(840)
+			padding: 0 10px
 .title
 	+fk
 	font-size: 22px
@@ -104,6 +107,7 @@ table
 	background-repeat: no-repeat 
 	background-size: cover	
 	box-shadow: 0 -1px 0 white inset
+	background-position: 50% 50% 
 	&:after
 		display: none
 	.header__in
@@ -112,8 +116,11 @@ table
 	padding: 0 25px 30px
 	background-repeat: no-repeat 
 	background-size: cover
+	background-position: 50% 50% 
 	box-shadow: 0 -1px 0 white inset
 	+box
+	+rt(840)
+		padding: 0 10px 30px
 .header__top, .header__in
 	+clr	
 .header__top
@@ -135,18 +142,18 @@ table
 .slider-prev, .footer__prev
 	left: 50%
 	margin-left: -672px
-	+s(slider-prev)
+	+s(m-slider-prev)
 	i
-		+s(slider-prev-h)
+		+s(m-slider-prev-h)
 	+rt(1440)
 		left: 12px
 		margin: 0
 .slider-next, .footer__next
 	right: 50%
 	margin-right: -672px
-	+s(slider-next)
+	+s(m-slider-next)
 	i
-		+s(slider-next-h)
+		+s(m-slider-next-h)
 	+rt(1440)
 		right: 12px
 		margin: 0
@@ -495,7 +502,9 @@ table
 			margin-bottom: 20px
 	.l__aside, .l__column
 		+rt(1200)
+			display: block
 			width: 100%		
+			padding: 0
 	+rt(1200)
 		& > .title
 			display: none
@@ -688,13 +697,90 @@ table
 				opacity: 1 
 //item
 .items	
-	width: 1170px
+	//width: 1170px
 	overflow: hidden
 	+rt(1200)
 		width: 774px
 		margin: 0 auto
 	+rt(840)
 		width: 320px
+.items_mod
+	.block
+		&.block_type-1, &.block_type-2, &.block_type-3, &.block_type-4, &.block_type-5, &.block_type-6, &.block_type-7, &.block_type-8, &.block_type-9
+			width: 378px
+			+rt(840)
+				width: 320px
+		&.block_type-7
+			+rt(840)
+				width: 312px
+		&.block_type-1
+			+rt(840)
+				height: auto
+				color: #FFF 
+				.block__pic
+					margin: 0
+				.block__in
+					position: absolute
+					left: 20px
+					bottom: 20px
+				.title-sub
+					&:after
+						+trans(background .2s linear)
+						background: #fff
+				&:hover
+					color: #000 
+					.block__in		
+						padding-left: 0	
+					.title-sub
+						&:after
+							background: #000
+		&.block_type-2, &.block_type-5
+			.block__pic-in
+				+rt(840)
+					display: none				
+			width: 378px
+			height: auto
+			.block__pic-big
+				float: left
+				margin: 0 0 18px 0
+			+rt(840)
+				width: 320px
+				.block__pic-big
+					margin: 0		
+		&.block_type-3
+			width: 378px
+			height: auto
+			.block__pic
+				float: none
+				margin: 0
+			.block__in, .text			
+				+trans(all .2s linear)
+			.block__in
+				padding-right: 20px
+			.text
+				padding-right: 20px
+			&:hover
+				.block__in
+					padding: 0 20px 0 20px
+				.text
+					padding: 0 20px 20px 0
+				+rt(840)
+					.block__in, .text
+						padding: 0
+			+rt(840)
+				width: 320px
+		&.block_type-4, &.block_type-8
+			width: 378px
+			.block__in
+				width: auto
+				left: 20px
+				right: 20px
+			+rt(840)
+				width: 320px
+		&.block_type-7
+			+rt(840)
+				.block__in
+					padding: 20px
 .items__in
 	margin-right: -50px
 .block

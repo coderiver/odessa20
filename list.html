@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Blog</title>
+	<title>List</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
@@ -15,7 +15,7 @@
 <body>
 <!-- BEGIN .header -->
 <div class="header header_inner" style="background-image: url(img/slide2.jpg)">
-	<div class="header__center" style="background-image: url(img/slide2.jpg)">
+	<div class="header__center">
 		<div class="header__top">
 			<div class="lang">				
 				<a class="is-active" href="#">рус</a>
@@ -62,66 +62,132 @@
 				<input type="text" placeholder="Напишите запрос">
 				<button><i></i></button>
 			</div>
-		</div>		
+		</div>	
+		<!-- BEGIN .category -->
+		<div class="category">
+			<div class="title is-line-center is-line-white">Архитектура</div>
+			<div class="title-sub">Это раздел о том какая архитектура в Одессе, как она развивается и что нового появляется в нашем прекрасном городе. Наше движение проводит ряд проектов, которые вы найдете на страницах раздела.</div>
+		</div>
+		<!-- END .category -->	
 	</div>
 </div>
 <!-- END .header -->
 <!-- BEGIN .wrap -->
-<div class="wrap">	
+<div class="wrap">			
 	<!-- BEGIN .l -->
 	<div class="l">
 		<div class="l__column">
-			<div class="title is-line">Блог</div>
-			<!-- BEGIN .blog -->
-			<div class="blog">
-				<div class="blog__in">
-					<div class="blog__item">
-						<img src="img/pic7.jpg" alt="">
-						<a class="blog__detail" href="#">
-							<div class="title is-line-center">
-								<p>В мире начали снова строить маяки.</p>
-								<p>узнайте для чего?</p>
-							</div>
-							<div class="text">Да, это не новость, но почему сейчас все портовые города так серьезно начали строительство и реконструкцию маяков.</div>
-							<div class="date">10 августа 2013</div>
-						</a>
-						<a class="blog__link-more" href="#">читать подробнее</a>
-					</div>
-					<div class="blog__item blog__item_mod">
-						<img src="img/pic7.jpg" alt="">
-						<a class="blog__detail" href="#">
-							<div class="title is-line-center">
-								<p>В мире начали снова строить маяки.</p>
-								<p>узнайте для чего?</p>
-							</div>
-							<div class="text">Да, это не новость, но почему сейчас все портовые города так серьезно начали строительство и реконструкцию маяков.</div>
-							<div class="date">10 августа 2013</div>
-						</a>
-						<a class="blog__link-more" href="#">читать подробнее</a>
-					</div>
-					<div class="blog__item">
-						<img src="img/pic7.jpg" alt="">
-						<a class="blog__detail" href="#">
-							<div class="title is-line-center">
-								<p>В мире начали снова строить маяки.</p>
-								<p>узнайте для чего?</p>
-							</div>
-							<div class="text">Да, это не новость, но почему сейчас все портовые города так серьезно начали строительство и реконструкцию маяков.</div>
-							<div class="date">10 августа 2013</div>
-						</a>
-						<a class="blog__link-more" href="#">читать подробнее</a>
-					</div>
-					<!-- BEGIN .load-more -->
-					<div class="load-more">
-						<button><i></i><span>ЗАГРУЗИТЬ ЕЩЕ</span></button>
-					</div>
-					<div class="load-more is-loading">
-						<button><i></i><span>ЗАГРУЗИТЬ ЕЩЕ</span></button>
-					</div>
-					<!-- END .load-more -->
+			<!-- BEGIN .items -->
+			<div class="items items_mod">
+				<div class="items__in">
+					<a class="block block_type-1" href="#">
+						<div class="block__pic">
+							<img src="img/pic2.jpg" width="378" height="285" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub is-line">Сити бренд</div>
+							<div class="title">Топ-10 памятников архитектуры</div>
+						</div>
+					</a>
+					<a class="block block_type-2" href="#">
+						<div class="block__pic">
+							<div class="block__pic-big">
+								<img src="img/pic3.jpg" width="378" height="140" alt="">
+							</div>					
+							<div class="block__pic-in">
+								<img src="img/pic4.jpg" width="180" height="140" alt="">
+								<img src="img/pic5.jpg" width="180" height="140" alt="">
+							</div>					
+						</div>
+						<div class="block__in">
+							<div class="title-sub is-line-white">Места</div>
+							<div class="title">Grill Meat</div>
+						</div>
+						<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+					</a>
+					<a class="block block_type-3" href="#">
+						<div class="block__pic">
+							<img src="img/pic6.jpg" width="378" height="292" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub">Лето 2013</div>
+							<div class="title is-line">Календарь событий в Одессе</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+						</div>				
+					</a>
+					<a class="block block_type-4" href="#">
+						<div class="block__pic">
+							<img src="img/pic7.jpg" width="774" height="292" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub">Архитектура</div>
+							<div class="title is-line-center">Проект: Реконструкция лестницы</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+							<div class="date">25.07.2013 - 08.08.2013</div>
+						</div>			
+					</a>
+					<a class="block block_type-5" href="#">
+						<div class="block__pic">
+							<div class="block__pic-big">
+								<img src="img/pic3.jpg" width="378" height="140" alt="">
+							</div>					
+							<div class="block__pic-in">
+								<img src="img/pic4.jpg" width="180" height="140" alt="">
+								<img src="img/pic5.jpg" width="180" height="140" alt="">
+							</div>					
+						</div>
+						<div class="block__in">				
+							<div class="title is-line-white">Концерт в городе</div>
+							<div class="date">Лето 2013</div>					
+						</div>				
+						<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+					</a>
+					<a class="block block_type-6" href="#">
+						<div class="block__pic">
+							<img src="img/pic8.jpg" width="378" height="450" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub">Архитектура</div>
+							<div class="title is-line-center is-line-white">Проект: Реконструкция лестницы</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+						</div>
+					</a>
+					<a class="block block_type-7" href="#">
+						<div class="block__in">
+							<div class="title-sub">Лето 2013</div>
+							<div class="title is-line-center">Календарь событий в Одессе</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+						</div>
+					</a>
+					<a class="block block_type-8" href="#">
+						<div class="block__pic">
+							<img src="img/pic9.jpg" width="774" height="292" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub">Архитектура</div>
+							<div class="title is-line-center">Проект: Реконструкция лестницы</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3.</div>
+							<div class="date">25.07.2013 - 08.08.2013</div>
+						</div>			
+					</a>
+					<a class="block block_type-9" href="#">
+						<div class="block__pic">
+							<img src="img/pic10.jpg" width="300" height="250" alt="">
+						</div>
+					</a>
+					<a class="block block_type-3" href="#">
+						<div class="block__pic">
+							<img src="img/pic6.jpg" width="378" height="292" alt="">
+						</div>
+						<div class="block__in">
+							<div class="title-sub">Лето 2013</div>
+							<div class="title is-line">Календарь событий в Одессе</div>
+							<div class="text">Электро-магнитное поле сердца можно зарегистрировать на расстоянии 2-3 метров от породившего его тела.</div>
+						</div>				
+					</a>
 				</div>
 			</div>
-			<!-- END .blog -->
+			<!-- END .items -->
 		</div>
 		<div class="l__aside">
 			<!-- BEGIN .aside-nav -->
@@ -146,7 +212,7 @@
 			<!-- END .aside-blocks -->
 		</div>
 	</div>
-	<!-- END .l -->
+	<!-- END .l -->	
 </div>
 <!-- END .wrap -->
 <!-- BEGIN .footer -->

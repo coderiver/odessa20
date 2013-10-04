@@ -83,6 +83,40 @@ function select() {
 };
 select();
 
+//tabs
+function tabs() {
+	var el = $('.js-tabs');
+	var item = el.find('.tabs__item');
+	var btn = el.find('.tabs__nav button');
+	var el_join = $('.js-join');
+	var btn_join = el_join.find('.join-nav__btns button');
+	var title = el_join.find('.join-nav__text');
+	item.hide();
+	item.first().show();
+	btn.click(function() {
+		if (!$(this).hasClass('is-active')) {
+			btn.removeClass('is-active');
+			item.hide();
+			$(this).addClass('is-active');
+			var tab = $(this).attr('data-tab');
+			$('.' + tab).fadeIn();
+			alert(btn_join.attr('data-tab') == tab);
+		};
+	});	
+	btn_join.click(function() {
+		if (!$(this).hasClass('is-active')) {
+			var text = $(this).attr('data-text');
+			var tab = $(this).attr('data-tab');
+			btn_join.removeClass('is-active');
+			title.html(text);
+			$(this).addClass('is-active');
+			item.hide();
+			$('.' + tab).fadeIn();
+		};
+	});
+};
+tabs();
+
 //click document
 $(document).click(function() {
 	$('.js-select').removeClass('is-open');
