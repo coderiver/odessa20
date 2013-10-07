@@ -100,7 +100,12 @@ function tabs() {
 			$(this).addClass('is-active');
 			var tab = $(this).attr('data-tab');
 			$('.' + tab).fadeIn();
-			alert(btn_join.attr('data-tab') == tab);
+			btn_join.each(function() {
+				if ($(this).attr('data-tab') == tab) {
+					btn_join.removeClass('is-active');
+					$(this).addClass('is-active');
+				};
+			});
 		};
 	});	
 	btn_join.click(function() {
@@ -112,6 +117,12 @@ function tabs() {
 			$(this).addClass('is-active');
 			item.hide();
 			$('.' + tab).fadeIn();
+			btn.each(function() {
+				if ($(this).attr('data-tab') == tab) {
+					btn.removeClass('is-active');
+					$(this).addClass('is-active');
+				};
+			});
 		};
 	});
 };

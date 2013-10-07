@@ -173,6 +173,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .footer { padding-top: 55px; }
 .footer .logo { float: left; margin: 0 40px 0 0; }
 @media only screen and (max-width: 840px) { .footer .logo { display: none; } }
+@media only screen and (max-width: 840px) { .footer { padding-top: 10px; } }
 
 @media only screen and (max-width: 840px) { .footer__in .l { margin-bottom: 20px; } }
 @media only screen and (max-width: 1200px) { .footer__in .l__aside, .footer__in .l__column { display: block; width: 100%; padding: 0; } }
@@ -501,6 +502,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .aside-blocks .block_type-7 { width: 370px; }
 
 .content p { margin-bottom: 30px; line-height: 1.5; }
+@media only screen and (max-width: 840px) { .content p { margin-bottom: 20px; } }
 
 .content__l { margin-bottom: 25px; }
 .content__l:after { display: block; clear: both; height: 0; content: " "; }
@@ -512,14 +514,16 @@ table { border-spacing: 0; border-collapse: collapse; }
   .content__column:first-child { padding: 0; } }
 
 .content__message { padding: 15px 75px; margin-bottom: 45px; background: #facf00; text-align: center; line-height: 2; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+@media only screen and (max-width: 840px) { .content__message { margin-bottom: 20px; } }
 
 .content__list { margin-bottom: 60px; padding-left: 87px; counter-reset: list; }
 .content__list li { position: relative; list-style-type: none; }
 .content__list li:before { counter-increment: list; content: counter(list); position: absolute; top: 0; left: -87px; width: 60px; height: 60px; border: 4px solid #333333; font-family: "KelsonSansBold", Arial, sans-serif; text-align: center; line-height: 60px; font-size: 22px; }
 .content__list p, .content__list img { margin-bottom: 35px; }
 .content__list img { max-width: 600px; width: 100%; }
-@media only screen and (max-width: 840px) { .content__list { padding-left: 47px; }
-  .content__list li:before { left: -47px; width: 28px; height: 28px; line-height: 28px; font-size: 12px; } }
+@media only screen and (max-width: 840px) { .content__list { padding-left: 47px; margin-bottom: 20px; }
+  .content__list li:before { left: -47px; width: 28px; height: 28px; line-height: 28px; font-size: 12px; }
+  .content__list p, .content__list img { margin-bottom: 20px; } }
 
 .content__definitions { margin-bottom: 10px; }
 .content__definitions:after { display: block; clear: both; height: 0; content: " "; }
@@ -527,6 +531,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .content__definitions dd { display: table; }
 .content__definitions dd li { position: relative; padding-left: 30px; margin-bottom: 20px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.8; }
 .content__definitions dd li:before { content: ""; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background: #ffd509; }
+@media only screen and (max-width: 840px) { .content__definitions dd li { margin-bottom: 10px; } }
 @media only screen and (max-width: 840px) { .content__definitions dt { float: none; width: auto; } }
 
 .content__quote { margin-bottom: 40px; }
@@ -537,15 +542,17 @@ table { border-spacing: 0; border-collapse: collapse; }
 .content__quote p span { margin-bottom: 5px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
 .content__quote q { position: relative; display: table; padding-left: 55px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 16px; line-height: 1.5; }
 .content__quote q:before { content: ""; position: absolute; top: 0; left: 0; background: url('../img/icons-s35b7ff0e7c.png') 0 -968px no-repeat; width: 34px; height: 20px; }
-@media only screen and (max-width: 840px) { .content__quote p { float: none; margin: 0; overflow: hidden; }
+@media only screen and (max-width: 840px) { .content__quote { margin-bottom: 20px; }
+  .content__quote p { float: none; margin: 0; overflow: hidden; }
   .content__quote p img { float: left; margin-right: 10px; }
   .content__quote q { display: block; } }
 
 .content__user { margin-bottom: 55px; text-align: center; }
+@media only screen and (max-width: 840px) { .content__user { margin-bottom: 20px; } }
 
 .content__user-in { position: relative; display: inline-block; vertical-align: top; }
 .content__user-in img { display: block; max-width: 600px; width: 100%; }
-@media only screen and (max-width: 840px) { .content__user-in { margin: 0 -10px 20px; } }
+@media only screen and (max-width: 840px) { .content__user-in { margin: 0 -10px; } }
 
 .content__user-detail { position: absolute; top: 50%; left: 100px; right: 100px; margin-top: -30px; padding: 20px; border: 4px solid #333333; background: white; }
 @media only screen and (max-width: 840px) { .content__user-detail { left: 10px; right: 10px; } }
@@ -603,14 +610,16 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .contacts { border-width: 4px 0; margin-bottom: 45px; }
 .contacts p { margin-bottom: 5px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
-@media only screen and (max-width: 840px) { .contacts { margin: 0 -10px 45px; } }
+@media only screen and (max-width: 840px) { .contacts { margin: 0 -10px 20px; } }
 
 .partner { margin-bottom: 40px; }
+@media only screen and (max-width: 840px) { .partner { margin-bottom: 20px; } }
 
 .form .title, .form .title-sub { text-align: center; }
 .form .title { margin-bottom: 10px; }
 
 .form_margin { margin-bottom: 90px; }
+@media only screen and (max-width: 840px) { .form_margin { margin-bottom: 20px; } }
 
 .form__in { width: 570px; margin: 0 auto; }
 @media only screen and (max-width: 840px) { .form__in { width: 300px; } }
@@ -660,6 +669,7 @@ table { border-spacing: 0; border-collapse: collapse; }
   .blog__item .blog__link-more { display: none; } }
 
 .blog__item_mod .blog__detail { left: auto; right: 20px; }
+@media only screen and (max-width: 840px) { .blog__item_mod .blog__detail { width: auto; right: 20px; left: 20px; } }
 .blog__item_mod .blog__link-more { left: 20px; right: auto; }
 
 .blog__detail { position: absolute; top: 20px; left: 20px; bottom: 20px; width: 298px; padding: 20px; background: white; text-align: center; }
@@ -677,6 +687,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .news-list { margin-bottom: 60px; }
 .news-list .slider__detail { margin-bottom: 25px; }
 @media only screen and (max-width: 840px) { .news-list .slider { width: 300px; } }
+@media only screen and (max-width: 840px) { .news-list { margin-bottom: 20px; } }
 
 .news-list__item { width: 772px; white-space: normal; }
 .news-list__item:after { display: block; clear: both; height: 0; content: " "; }
@@ -697,11 +708,14 @@ table { border-spacing: 0; border-collapse: collapse; }
 .calendar td { padding: 10px 30px; vertical-align: middle; }
 @media only screen and (max-width: 840px) { .calendar td { padding: 10px; }
   .calendar td:first-child { text-align: center; } }
+@media only screen and (max-width: 840px) { .calendar { margin-bottom: 20px; } }
 
 .events { margin-bottom: 60px; }
+@media only screen and (max-width: 840px) { .events { margin-bottom: 20px; } }
 
 .events__item { margin-bottom: 40px; }
 .events__item:after { display: block; clear: both; height: 0; content: " "; }
+@media only screen and (max-width: 840px) { .events__item { margin-bottom: 20px; } }
 
 .events__column { display: table; margin-bottom: 4px; }
 .events__column:first-child { float: left; margin-right: 28px; }
@@ -727,6 +741,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .events__source a:hover { color: #333333; }
 
 .map { margin-bottom: 45px; }
+@media only screen and (max-width: 840px) { .map { margin-bottom: 20px; } }
 
 @media only screen and (max-width: 840px) { .map__in { margin: 0 -10px; } }
 
@@ -772,3 +787,6 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 @media only screen and (max-width: 840px) { .joining { padding: 0 10px; }
   .joining .tabs__nav { display: none; } }
+
+.ie8 .search input { line-height: 75px; }
+.ie8 .form__field input { line-height: 58px; }
