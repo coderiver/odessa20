@@ -464,13 +464,18 @@
 	left: 20px
 	bottom: 20px
 	width: 298px
-	padding: 20px
+	padding: 0 20px
 	background: #FFF 
 	text-align: center
+	line-height: 252px
 	+rt(840)
 		width: auto
 		right: 20px
 		left: 20px
+.blog__center
+	display: inline-block
+	vertical-align: middle
+	line-height: 1.2
 .blog__detail, .project
 	.text
 		margin-bottom: 10px 
@@ -782,5 +787,48 @@
 		padding: 0 10px
 		.tabs__nav
 			display: none
-
-	 
+//popup
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #999
+	z-index: 1000  
+.popup
+	position: fixed
+	top: 200px
+	left: 50%
+	width: 420px
+	padding: 20px
+	margin-left: -230px 
+	background: #FFF 
+	text-align: center
+	z-index: 1100  
+	.text
+		margin-bottom: 20px
+.popup__btn-close
+	position: absolute
+	top: 0
+	right: -35px
+	width: 35px
+	height: 35px
+	background: #334 
+	i
+		display: inline-block
+		+s(m-slider-close)
+.link
+	text-align: center
+	a
+		display: inline-block
+		height: 26px
+		padding: 0 17px
+		background: #facf00 
+		line-height: 26px
+		+trans(all .2s linear)
+		+fs
+		&:hover
+			background: #333
+			color: #fff  
+	
