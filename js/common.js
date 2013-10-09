@@ -15,6 +15,7 @@ blocks();
 
 //nav
 function nav() {	
+	var el = $('.js-nav');
 	var nav = $('.js-nav ul');
 	var nav_bg = $('.js-nav-bg');
 	var nav_open = $('.js-nav-open');
@@ -34,12 +35,12 @@ function nav() {
 	};
 	
 	nav_open.click(function(){
-		nav.fadeIn();
+		el.fadeIn();
 		nav_close.fadeIn();
 		nav_bg.fadeIn();
 	});
 	nav_close.click(function(){
-		nav.fadeOut();
+		el.fadeOut();
 		nav_close.fadeOut();
 		nav_bg.fadeOut();
 	});

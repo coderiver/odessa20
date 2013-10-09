@@ -309,7 +309,9 @@ table
 			float: left
 			height: 75px
 			+trans(background .2s linear)
-			overflow: hidden						
+			overflow: hidden
+			&.is-active
+				background: #FFF 					
 			&:hover
 				background: #FFF 
 				overflow: visible
@@ -347,6 +349,8 @@ table
 					+fb
 					&:hover
 						color: $ch 
+						+rt(1200)
+							color: #000 
 	+rt(1200)
 		display: none
 		position: absolute
