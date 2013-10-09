@@ -15,22 +15,24 @@ blocks();
 
 //nav
 function nav() {	
-	var nav = $('.js-nav');
+	var nav = $('.js-nav ul');
 	var nav_bg = $('.js-nav-bg');
 	var nav_open = $('.js-nav-open');
 	var nav_close = $('.js-nav-close');
-	nav.mouseenter(function() {
+	nav.hoverIntent(nav_1, nav_2);
+	function nav_1() {
 		var wnd_width = $(window).width();
 		if (wnd_width > 1200) {
 			nav_bg.fadeIn(200);
 		};
-	});
-	nav_bg.mouseenter(function() {
+	};
+	function nav_2() {
 		var wnd_width = $(window).width();
 		if (wnd_width > 1200) {
 			nav_bg.fadeOut(200);
 		};		
-	});
+	};
+	
 	nav_open.click(function(){
 		nav.fadeIn();
 		nav_close.fadeIn();
