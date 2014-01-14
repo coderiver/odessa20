@@ -10,6 +10,7 @@
 	<script src="js/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.cycle2.carousel.min.js"></script>	
 	<script src="js/masonry.pkgd.min.js"></script>	
+	<script src="js/jquery.hoverIntent.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
 		<div class="header__top">
 			<div class="lang">				
 				<a class="is-active" href="#">рус</a>
-				<a href="#">eng</a>
+				<a id="syka" href="#">eng</a>
 			</div>
 			<div class="social">
 				<a class="social__fb" href="#"><i></i></a>
@@ -77,8 +78,8 @@
 <!-- BEGIN .wrap -->
 <div class="wrap">	
 	<!-- BEGIN .l -->
-	<div class="l">
-		<div class="l__column">			
+	<div class="l js-scroll-block-wrap">
+		<div class="l__column">
 			<!-- BEGIN .content -->
 			<div class="content">
 				<div class="title is-line">Заглавие 2</div>
@@ -415,6 +416,18 @@
 				</a>
 			</div>
 			<!-- END .aside-blocks -->
+			<!-- BEGIN .scroll-block -->
+			<div class="scroll-block js-scroll-block-el">
+				<div class="scroll-block__in">
+					<div class="title-sub">первая встреча состоится</div>
+					<div class="title is-line-center">15 декабря 2015</div>
+					<div class="scroll-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, id assumenda earum adipisci reiciendis minima qui in minus. Error atque optio aperiam harum odit tempore quasi iure veritatis ullam inventore!</div>
+					<div class="scroll-block__link">
+						<a href="#">tratata.com</a>
+					</div>
+				</div>				
+			</div>
+			<!-- END .scroll-block -->
 		</div>
 	</div>
 	<!-- END .l -->
