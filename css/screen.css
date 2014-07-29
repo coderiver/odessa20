@@ -139,12 +139,15 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav > ul > li ul a:hover { color: #ffc209; }
 @media only screen and (max-width: 1200px) { .nav > ul > li ul a:hover { color: black; } }
 @media only screen and (max-width: 1200px) { .nav { display: none; position: absolute; top: 0; left: 0; right: 0; background: white; }
-  .nav > ul { float: none; padding: 15px 0; background: white; }
+  .nav > ul { float: none; background: white; }
   .nav > ul > li { float: none; height: auto; text-align: center; }
+  .nav > ul > li.is-active > a { background: #f7c035; }
   .nav > ul > li > a { height: 60px; font-size: 18px; line-height: 60px; }
-  .nav > ul > li ul { display: block; position: relative; top: auto; padding: 18px 23px; background: url(../img/bg.jpg); border: 4px solid #333333; border-width: 4px 0; opacity: 1; }
+  .nav > ul > li ul { display: block; position: relative; top: auto; padding: 18px 0; background: url(../img/bg.jpg); border: 4px solid #333333; border-width: 4px 0; opacity: 1; }
   .nav > ul > li ul:after { content: ""; position: absolute; top: -10px; left: 50%; margin-left: -15px; width: 0px; height: 0px; border-style: solid; border-width: 0 15px 10px 15px; border-color: transparent transparent #ffc209 transparent; }
-  .nav > ul > li ul:before { content: ""; position: absolute; top: -15px; left: 50%; margin-left: -21px; width: 0px; height: 0px; border-style: solid; border-width: 0 21px 14px 21px; border-color: transparent transparent #333333 transparent; } }
+  .nav > ul > li ul:before { content: ""; position: absolute; top: -15px; left: 50%; margin-left: -21px; width: 0px; height: 0px; border-style: solid; border-width: 0 21px 14px 21px; border-color: transparent transparent #333333 transparent; }
+  .nav > ul > li ul li.is-active a { background: white; color: #333333; }
+  .nav > ul > li ul a { padding: 10px 23px; } }
 @media only screen and (max-width: 840px) { .nav { top: 75px; right: -75px; }
   .nav > ul { padding: 0; } }
 
@@ -512,13 +515,13 @@ table { border-spacing: 0; border-collapse: collapse; }
 .aside-nav ul { padding: 15px 0; }
 .aside-nav a { display: block; padding: 12px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
 .aside-nav a:hover { color: white; }
-.aside-nav li.is-active a { background: #333333; color: white; }
+.aside-nav li.is-active a { background: white; color: #333333; }
 
 .aside-blocks .items, .aside-blocks .items__in { width: 378px; }
 .aside-blocks .block { width: 378px; margin: 0 0 20px 0; }
 .aside-blocks .block_type-7 { width: 370px; }
 
-.content p { margin-bottom: 30px; line-height: 1.5; }
+.content p { max-width: 585px; margin-bottom: 30px; line-height: 1.5; }
 @media only screen and (max-width: 840px) { .content p { margin-bottom: 20px; } }
 
 .content_aside { margin-bottom: 20px; }
