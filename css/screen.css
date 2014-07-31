@@ -359,8 +359,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 .block_type-7 .title { padding: 0 20px 18px; }
 .block_type-7.animation-yellow-block:hover { padding: 4px; border: 0; }
 
-.block_type-9 { width: 378px; height: 292px; text-align: center; line-height: 292px; background: #333333; font-size: 0; }
-.block_type-9 img { position: relative; display: inline-block; vertical-align: middle; z-index: 5; }
+.block_type-9 { width: 378px; height: 292px; font-size: 0; }
+.block_type-9 .block__pic { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: 50% 50%; }
 
 @-webkit-keyframes anim1 { from { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
@@ -488,6 +488,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 .aside-nav a { display: block; padding: 12px; font-family: "DroidSansBold", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
 .aside-nav a:hover { color: white; }
 .aside-nav li.is-active a { background: white; color: #333333; }
+
+.aside-fancy { margin-bottom: 20px; padding: 10px; border: 4px solid #333333; }
+.aside-fancy .content p { margin: 0; }
 
 .aside-blocks .items, .aside-blocks .items__in { width: 378px; }
 .aside-blocks .block { width: 378px; margin: 0 0 20px 0; }
